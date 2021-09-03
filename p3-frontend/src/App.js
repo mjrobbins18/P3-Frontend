@@ -1,11 +1,13 @@
 import './App.css';
+import { DataContext } from './components/DataContext.jsx'
 import Landing from './components/Landing';
 
 function App() {
   return (
     <div >
-      <h1>Hello World</h1>
-      <Landing/>
+      <DataContext.Provider>
+        <Landing/>
+      </DataContext.Provider>
     </div>
   );
 }
