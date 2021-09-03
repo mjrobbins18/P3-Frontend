@@ -16,18 +16,20 @@ function Dropdown(props) {
         return (
             <div className = "Dropdown">
                 <img onClick = { showDropDown } className = "dropDownIcon" src = { dropDownIcon } alt = "dropdown"/>
+                <div className = "dropDownContent">
+                    <Link to = '/'>Home</Link>
+                    <PriceFilter/>
+                   
+                    </div>
                 </div>
         );
     }else if(dropDown === true){
         return (
             <div className = "Dropdown">
                 <img onClick = { showDropDown } className = "dropDownIcon" src = { dropDownIcon } alt = "dropdown"/>
-            <div className = "dropDownContent">
-                    <Link to = '/'>Home</Link>
+            <div className = "show">
+   
                     <PriceFilter/>
-                    <Link to = '/create'>Create NFT</Link><br></br>
-                    <Link to = '/about'>About</Link><br></br>
-                    <Link to = '/Login'>Login</Link>
             </div>
             </div>
         )
