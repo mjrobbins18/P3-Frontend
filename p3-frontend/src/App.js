@@ -4,7 +4,7 @@ import Landing from './components/Landing';
 
 function App() {
   return (
-    <div >
+    <div className = "App" >
       <DataContext.Provider>
         <Landing/>
       </DataContext.Provider>
