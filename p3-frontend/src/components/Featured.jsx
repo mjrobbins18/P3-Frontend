@@ -4,10 +4,11 @@ import flower1 from './Images/flower1.jpg'
 import forest from './Images/forest.jpg'
 import mountain from './Images/mountain.jpg'
 
-function Collection(props) {
+function Featured(props) {
     return (
-        <div className = "collectionContainer">
-            <fieldset className = "collectionField"><legend className = "collectionLegend">Collections</legend></fieldset>
+        <div>
+            <div className = "collectionContainer">
+            <fieldset className = "collectionField"><legend className = "collectionLegend">Featured</legend></fieldset>
         <div className = "imageContainer">
             <div className = "div">
                  <img  className = "collectionImage" src ={flower} alt = ""/>
@@ -27,7 +28,9 @@ function Collection(props) {
         </div>
                     
         </div>   
+            
+        </div>
     );
 }
 
-export default Collection;<h1>Collection</h1>
+export default Featured;
