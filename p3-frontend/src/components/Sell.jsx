@@ -1,11 +1,11 @@
 import React from 'react';
 
-function About(props) {
+function Sell(props) {
     return (
         <div>
-            <h1>About</h1>
+            <h1>Sell</h1>
         </div>
     );
 }
 
-export default About;
+export default Sell;
