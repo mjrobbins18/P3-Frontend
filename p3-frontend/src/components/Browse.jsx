@@ -13,29 +13,22 @@ function Browse(props) {
         <div>
        
         <div className = "imageContainer">
-            <img className = "image" src ={flower} alt = ""/>
-            <img className = "image"  src ={flower1} alt = ""/>
-            <img className = "image"  src ={mountain} alt = ""/>
-            <img className = "image"  src ={forest} alt = ""/>
-            <img className = "image"  src ={flower} alt = ""/>
-            <img className = "image"  src ={flower1} alt = ""/>
-            <img className = "image"  src ={mountain} alt = ""/>
-            <img className = "image"  src ={forest} alt = ""/>
-            <img className = "image"  src ={flower} alt = ""/>
-            <img className = "image"  src ={flower1} alt = ""/>
+            <div className = "div">
+                <p className = "centered">Browse</p> <img  className = "image" src ={flower} alt = ""/>
+            </div>
+            <div className = "div">
+                <p className = "centered">Drops</p> <img  className = "image" src ={mountain} alt = ""/>
+            </div>
+            <div className = "div">
+                <p className = "centered">New</p> <img  className = "image" src ={flower1} alt = ""/>
+            </div>
+            <div className = "div">
+                <p className = "centered">Coming</p> <img  className = "image" src ={forest} alt = ""/>
+            </div>
+            <div className = "div">
+                <p className = "centered">Brands</p> <img  className = "image" src ={flower} alt = ""/>
+            </div>
         </div>
-        <div className = "imageContainer">
-        <img className = "image" src ={flower} alt = ""/>
-        <img className = "image"  src ={flower1} alt = ""/>
-        <img className = "image"  src ={mountain} alt = ""/>
-        <img className = "image"  src ={forest} alt = ""/>
-        <img className = "image"  src ={flower} alt = ""/>
-        <img className = "image"  src ={flower1} alt = ""/>
-        <img className = "image"  src ={mountain} alt = ""/>
-        <img className = "image"  src ={forest} alt = ""/>
-        <img className = "image"  src ={flower} alt = ""/>
-        <img className = "image"  src ={flower1} alt = ""/>
-    </div>
                     
         </div>    
     );
