@@ -22,11 +22,10 @@
   margin-top: 5px;
   height: 50px;
   width: 50px;
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 
 .dropDownContent {
-  margin-top: 0;
   background-color: black;
   color: white;
   border: 2px solid black;
