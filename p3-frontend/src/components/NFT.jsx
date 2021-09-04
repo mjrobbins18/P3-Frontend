@@ -12,7 +12,7 @@ function NFT(props) {
             <Details/>
             <SimilarArt/>
             <Buy/>
-            <Collection/>
+            {/* <Collection/> */}
           
         </div>
     );

@@ -4,12 +4,12 @@ import flower1 from './Images/flower1.jpg'
 import forest from './Images/forest.jpg'
 import mountain from './Images/mountain.jpg'
 
-function Featured(props) {
+function RecentlyAdded(props) {
     return (
         <div>
-            <div>
-            <fieldset className = "collectionField"><legend className = "collectionLegend">Featured</legend></fieldset>
-        <div className = "imageContainer">
+             <div>
+            <fieldset className = "collectionField"><legend className = "collectionLegend">Recently Added</legend></fieldset>
+        <div className = "recentContainer">
             <div className = "div">
                  <img  className = "featuredImage" src ={flower} alt = ""/>
             </div>
@@ -27,10 +27,9 @@ function Featured(props) {
             </div>
         </div>
                     
-        </div>   
-            
+        </div> 
         </div>
     );
 }
 
-export default Featured;
+export default RecentlyAdded;
