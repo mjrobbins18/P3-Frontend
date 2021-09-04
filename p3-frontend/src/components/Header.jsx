@@ -10,11 +10,11 @@ function Header(props) {
         <div className = "Header">
             <Link to = '/'><img className = "Logo" src = { rocket } alt = "rocket logo"/></Link>
             <SearchBar/>
-            <Dropdown/>
             <Link to = '/Login'>Login</Link>
+            <Dropdown/>
         </div>
     );
-    
+
 }
 
 export default Header;

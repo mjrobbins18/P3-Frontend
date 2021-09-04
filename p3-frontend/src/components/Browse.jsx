@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import flower from './Images/flower.jpg'
 import flower1 from './Images/flower1.jpg'
 import forest from './Images/forest.jpg'
@@ -14,7 +15,7 @@ function Browse(props) {
        
         <div className = "imageContainer">
             <div className = "div">
-                <p className = "centered">Browse</p> <img  className = "image" src ={flower} alt = ""/>
+               <Link className = "link" to = "/browse"><p className = "centered">Browse</p> <img  className = "image" src ={flower} alt = ""/></Link>
             </div>
             <div className = "div">
                 <p className = "centered">Drops</p> <img  className = "image" src ={mountain} alt = ""/>

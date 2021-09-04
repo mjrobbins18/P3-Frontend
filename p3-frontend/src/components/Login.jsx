@@ -3,8 +3,9 @@ import LoginForm from './LoginForm';
 
 function Login(props) {
     return (
-        <div>
-            <h1>Login</h1>
+        <div className = "loginContainer">
+            <h1>Welcome to NFT Bazaar</h1>
+            <h3>Please Login</h3>
             <LoginForm/>
         </div>
     );
