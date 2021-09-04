@@ -9,6 +9,11 @@ import Login from './Login';
 import Main from './Main';
 import FooterNav from './FooterNav';
 import NFT from './NFT'
+import Random from './Random';
+import CreateUser from './CreateUser';
+import Buy from './Buy';
+import NFTContainer from './NFTContainer';
+
 
 
 function Landing(props) {
@@ -21,11 +26,15 @@ function Landing(props) {
                 <div>
                 {/* <Sidebar/> */}
                 <Route exact path = "/" render = { Main }/>
+                <Route exact path = "/browse" render = { Random }/>
                 <Route exact path = "/about" render = { About }/>
                 <Route exact path = "/trophies" render = { Trophies }/>
                 <Route exact path = "/create" render = { CreateNFT }/>
                 <Route exact path = "/login" render = { Login }/>
-                <Route exact path = "/NFT" render = { NFT }/>
+                <Route exact path = "/NFT" render = { NFTContainer }/>
+                <Route exact path = "/buy" render = { Buy }/>
+                {/* render = {routerProps = <NFT match = {routerProps.match}/>}/>*/}
+                <Route exact path = "/newuser" render = { CreateUser }/>
                 </div>
                
             </main>

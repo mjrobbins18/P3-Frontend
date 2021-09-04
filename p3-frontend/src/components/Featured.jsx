@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import flower from './Images/flower.jpg'
 import flower1 from './Images/flower1.jpg'
 import forest from './Images/forest.jpg'
@@ -11,7 +12,7 @@ function Featured(props) {
             <fieldset className = "collectionField"><legend className = "collectionLegend">Featured</legend></fieldset>
         <div className = "imageContainer">
             <div className = "div">
-                 <img  className = "featuredImage" src ={flower} alt = ""/>
+                 <Link to = "/NFT"><img  className = "featuredImage" src ={flower} alt = ""/></Link>
             </div>
             <div className = "div">
                  <img  className = "featuredImage" src ={mountain} alt = ""/>

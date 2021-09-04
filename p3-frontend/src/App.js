@@ -10,17 +10,23 @@ function App() {
     min: "",
     max: ""
 }
+const loginState = {
+  isLoggedIn: false,
+  buyOrLogin: "/login"
+}
 
 const [formStateMinMax, setFormStateMinMax] = useState(initialStateMinMax)
 const [inputMinMax, setInputMinMax] = useState(initialStateMinMax)
-
+const [loggedIn, setLoggedIn] = useState(loginState)
   return (
     <div className = "App" >
       <DataContext.Provider value = {{ formStateMinMax,
                                       setFormStateMinMax,
                                       inputMinMax,
                                       setInputMinMax,
-                                      initialStateMinMax}}>
+                                      initialStateMinMax,
+                                      loggedIn,
+                                      setLoggedIn}}>
         <Landing/>
       </DataContext.Provider>
     </div>
