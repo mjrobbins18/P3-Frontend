@@ -3,12 +3,10 @@
 
 .App {
   display: flex;
-  max-width: 375px;
-  max-height: 812px;
 }
 .link {
   text-decoration: none;
-  color: white;
+  color: red;
 }
 .Header {
   display: flex;
@@ -196,6 +194,26 @@
   padding-top: 2rem;
 }
 .loginContainer {
-  width: 200%;
+  margin-top: 50px;
+  width: 375px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  flex-direction: column;
   border: 2px solid black;
+  background: white
+}
+.formDiv{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.input {
+  width: 200px;
+  margin-bottom: 5px;
+}
+.loginBtn {
+  width: 100px
 }

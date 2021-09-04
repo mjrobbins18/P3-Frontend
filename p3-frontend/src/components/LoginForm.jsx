@@ -5,11 +5,11 @@ import CreateUser from './CreateUser';
 
 function LoginForm(props) {
     return (
-        <div>
-            <form>
-                <input type = "text"/>
-                <input type = "password"/>
-                <button>Log in</button>
+        <div className = "formDiv">
+            <form className = "loginForm">
+                <input className = "input" type = "text"/>
+                <input className = "input" type = "password"/><br></br>
+                <button className = "loginBtn">Log in</button>
             </form>
             <p>New User? Click Below:</p>
             <div>
