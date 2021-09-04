@@ -12,6 +12,7 @@
   height: 50px;
   background: black;
   color: white;
+  z-index: 2;
 }
 .Logo {
   height: 40px;
@@ -45,6 +46,7 @@
 }
 .show:hover {
   background-color: lightgray;
+  z-index: 2;
 }
 .Footer{
   display: flex;
@@ -102,5 +104,19 @@
   border-left: none;
   border-right: none;
   color: white
+}
+.featuredImage {
+  width: 250px;
+  height: 250px;
+  padding: 0.5rem;
+  border-radius: 5rem;
+}
+.recentContainer {
+  padding-bottom: 4rem;
+  margin-top: 2%;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  width: 375px
 }
 

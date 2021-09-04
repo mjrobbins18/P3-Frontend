@@ -8,6 +8,7 @@ import Trophies from './Trophies'
 import Login from './Login';
 import Main from './Main';
 import FooterNav from './FooterNav';
+import NFT from './NFT'
 
 
 function Landing(props) {
@@ -19,11 +20,12 @@ function Landing(props) {
             <main className = "Main">
                 <div>
                 {/* <Sidebar/> */}
-                <Main/>
+                <Route exact path = "/" render = { Main }/>
                 <Route exact path = "/about" render = { About }/>
                 <Route exact path = "/trophies" render = { Trophies }/>
                 <Route exact path = "/create" render = { CreateNFT }/>
                 <Route exact path = "/login" render = { Login }/>
+                <Route exact path = "/NFT" render = { NFT }/>
                 </div>
                
             </main>
