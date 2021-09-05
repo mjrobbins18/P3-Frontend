@@ -13,6 +13,7 @@ import Random from './Random';
 import CreateUser from './CreateUser';
 import Buy from './Buy';
 import NFTContainer from './NFTContainer';
+import RandomCont from './RandomCont';
 
 
 
@@ -26,7 +27,7 @@ function Landing(props) {
                 <div>
                 {/* <Sidebar/> */}
                 <Route exact path = "/" render = { Main }/>
-                <Route exact path = "/browse" render = { Random }/>
+                <Route exact path = "/browse" render = { RandomCont }/>
                 <Route exact path = "/about" render = { About }/>
                 <Route exact path = "/trophies" render = { Trophies }/>
                 <Route exact path = "/create" render = { CreateNFT }/>
