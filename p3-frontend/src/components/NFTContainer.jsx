@@ -1,10 +1,10 @@
 import React from 'react';
 import NFT from './NFT';
 
-function NFTContainer(props) {
+function NFTContainer({ match }) {
     return (
         <div>
-            <NFT/>
+            <NFT match = { match }/>
         </div>
     );
 }

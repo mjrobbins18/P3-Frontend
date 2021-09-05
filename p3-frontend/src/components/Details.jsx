@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 
-function Details(props) {
+function Details({ thisNFT }) {
     const [dropDown, setDropDown] = useState(false)
 
     const showDropDown = () => {
@@ -18,15 +18,30 @@ function Details(props) {
                 </div>
         );
     }else if(dropDown === true){
-        return (
-            <div className = "Dropdown">
+        
+        if(thisNFT[0].description ===  null){
+            return (
+                <div className = "Dropdown">
+                    <h1 onClick = { showDropDown }>Details</h1>
+                <div className = "show1">
+                    <h1>No details about this NFT available at this time!</h1>
+       
+                </div>
+                </div>
+            )
+        }else {
+            return(
+                
+                <div className = "Dropdown">
                 <h1 onClick = { showDropDown }>Details</h1>
             <div className = "show1">
-                <h1>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</h1>
+                <h1>{ thisNFT[0].description }</h1>
    
             </div>
             </div>
-        )
+            )
+        }
+        
     }
     
             

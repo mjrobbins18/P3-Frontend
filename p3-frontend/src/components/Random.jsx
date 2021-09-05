@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { DataContext } from './DataContext';
 import flower from './Images/flower.jpg'
 import flower1 from './Images/flower1.jpg'
@@ -17,7 +18,9 @@ function Random(props) {
         random.map(item => {
             return (
                 <div>
-                    <img className = "collectionImage" src = { item.image_url } alt = { item.name }/>
+                    <Link to = {`/NFT/${item._id}`}>
+                        <img className = "collectionImage" src = { item.image_preview_url} alt = { item.name }/>
+                    </Link>
                 </div> 
             )
                 
