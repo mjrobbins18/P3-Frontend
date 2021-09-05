@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import { DataContext } from './components/DataContext.jsx'
 import Landing from './components/Landing';
@@ -15,9 +15,19 @@ const loginState = {
   buyOrLogin: "/login"
 }
 
+
+const [random, setRandom] = useState([])
 const [formStateMinMax, setFormStateMinMax] = useState(initialStateMinMax)
 const [inputMinMax, setInputMinMax] = useState(initialStateMinMax)
 const [loggedIn, setLoggedIn] = useState(loginState)
+
+const url = "http://localhost:8000/nftmarketplace"
+
+    useEffect(() => {
+        fetch(url).then(res => res.json()).then(res=>setRandom(res)).catch(console.error)
+    },[])
+
+
   return (
     <div className = "App" >
       <DataContext.Provider value = {{ formStateMinMax,
@@ -26,7 +36,9 @@ const [loggedIn, setLoggedIn] = useState(loginState)
                                       setInputMinMax,
                                       initialStateMinMax,
                                       loggedIn,
-                                      setLoggedIn}}>
+                                      setLoggedIn,
+                                      random,
+                                      setRandom}}>
         <Landing/>
       </DataContext.Provider>
     </div>

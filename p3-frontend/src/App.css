@@ -60,6 +60,9 @@
   background-color: lightgray;
   z-index: 2;
 }
+.footerContainer{
+  padding-top: 5rem;
+}
 .Footer{
   display: flex;
   position: fixed;
@@ -106,7 +109,7 @@
   color: white;
 }
 .collectionImage {
-  width: 320px;
+  width: 360px;
   height: 250px;
   padding: 0.5rem;
   border-radius: 5rem;
@@ -216,4 +219,29 @@
 }
 .loginBtn {
   width: 100px
+}
+.trophyDiv{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 375px;
+  background: white;
+  border-radius: 1rem 1rem 2rem 2rem;
+  
+}
+
+.trophyImage {
+  width: 375px;
+  height: 500px;
+  border-radius: 1rem 1rem 0rem 0rem;
+}
+.sellBtn {
+  background: green;
+  padding: 0.5rem;
+  width: 100px;
+  margin-left: 115px;
+}
+.sellCont {
+  padding: 1rem;
 }
