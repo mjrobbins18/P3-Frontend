@@ -1,9 +1,6 @@
 import React, { useContext, useState } from 'react';
 import Details from './Details';
 import SimilarArt from './SimilarArt';
-import Buy from './Buy'
-import Collection from './Collection';
-import mountain from './Images/mountain.jpg'
 import { Link } from 'react-router-dom';
 import { DataContext } from './DataContext';
 
@@ -45,12 +42,7 @@ function NFT({ match }) {
             
            
             </div>
-            
-            
-
-           
             <SimilarArt/>
-            {/* <Collection/> */}
           
         </div>
     );

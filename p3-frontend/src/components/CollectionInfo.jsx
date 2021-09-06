@@ -8,7 +8,7 @@ function CollectionInfo({ match }) {
     const thisID = match.params.id
     const thisCollection = collection.filter(item => item._id === thisID)
 
-
+console.log(thisCollection)
     return (
        
             
