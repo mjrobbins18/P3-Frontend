@@ -17,15 +17,20 @@ const loginState = {
 
 
 const [random, setRandom] = useState([])
+const [collection, setCollection] = useState([])
 const [formStateMinMax, setFormStateMinMax] = useState(initialStateMinMax)
 const [inputMinMax, setInputMinMax] = useState(initialStateMinMax)
 const [loggedIn, setLoggedIn] = useState(loginState)
 
 const url = "http://localhost:8000/nftmarketplace"
+const collectUrl = "http://localhost:8000/nftmarketplace/collection"
 
     useEffect(() => {
         fetch(url).then(res => res.json()).then(res=>setRandom(res)).catch(console.error)
     },[])
+    useEffect(() => {
+      fetch(collectUrl).then(res => res.json()).then(res=>setCollection(res)).catch(console.error)
+  },[])
 
 
   return (
@@ -38,7 +43,9 @@ const url = "http://localhost:8000/nftmarketplace"
                                       loggedIn,
                                       setLoggedIn,
                                       random,
-                                      setRandom}}>
+                                      setRandom,
+                                      collection,
+                                      setCollection}}>
         <Landing/>
       </DataContext.Provider>
     </div>

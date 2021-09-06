@@ -1,32 +1,30 @@
-import React from 'react';
-import flower from './Images/flower.jpg'
-import flower1 from './Images/flower1.jpg'
-import forest from './Images/forest.jpg'
-import mountain from './Images/mountain.jpg'
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { DataContext } from './DataContext';
 
 function Collection(props) {
+
+    const { collection } = useContext(DataContext)
+    
+
     return (
         <div className = "collectionContainer">
             <fieldset className = "collectionField"><legend className = "collectionLegend">Collections</legend></fieldset>
-        <div className = "imageContainer">
+            <div className = "imageContainer">
+        {collection.map(item => {
+            return(
             <div className = "div">
-                 <img  className = "collectionImage" src ={flower} alt = ""/>
+            <Link to = {`/Collection/${item._id}`}>
+            <img  className = "collectionImage" src ={ item.image_url } alt = ""/>
+            </Link>
             </div>
-            <div className = "div">
-                 <img  className = "collectionImage" src ={mountain} alt = ""/>
-            </div>
-            <div className = "div">
-                <img  className = "collectionImage" src ={flower1} alt = ""/>
-            </div>
-            <div className = "div">
-                 <img  className = "collectionImage" src ={forest} alt = ""/>
-            </div>
-            <div className = "div">
-                <img  className = "collectionImage" src ={flower} alt = ""/>
+
+            )
+        })}
+           
             </div>
         </div>
-                    
-        </div>   
+                     
     );
 }
 
