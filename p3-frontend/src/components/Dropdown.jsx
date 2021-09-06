@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
 import PriceFilter from './PriceFilter';
-import dropDownIcon from './Images/dropdown.png'
+// import dropDownIcon from './Images/dropdown.png'
 
 //great job max!!! incredible work!!!
-
+//https://www.visualpharm.com/free-icons/menu-595b40b65ba036ed117d44bf  <---nice website for icons
 function Dropdown(props) {
-    
+    // const dropDownIcon = "https://visualpharm.com/assets/350/Menu-595b40b65ba036ed117d44bf.svg"
+    const dropDownIcon = "https://visualpharm.com/assets/188/Menu-595b40b75ba036ed117d9f7e.svg"
     const [dropDown, setDropDown] = useState(false)
 
     const showDropDown = () => {

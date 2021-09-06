@@ -1,6 +1,4 @@
 
-
-
 .App {
   display: flex;
 }
@@ -10,23 +8,65 @@
 }
 .Header {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   justify-content: space-between;
   position: fixed;
   width: 100%;
   border: 2px solid black;
-  height: 50px;
+  height: 40px;
   background: black;
   color: white;
   z-index: 2;
 }
+#dropLog {
+  display: flex;
+  flex-direction: row;
+  width: 10vw;
+  height: 10hw;
+  padding: 0px 20px 0 0px;
+}
+#loginIcon {
+  display: flex;
+  flex-direction: row;
+  width: 37px;
+  height: 38px;
+}
+#searchIcon {
+  width: 40px;
+  height: 30px;
+}
+#trophyIcon {
+  display: flex;
+  flex-direction: row;
+  width: 37px;
+  height: 38px;
+}
+#createIcon {
+  display: flex;
+  flex-direction: row;
+  width: 37px;
+  height: 38px;
+  border-radius: 50%;
+}
+#aboutIcon {
+  display: flex;
+  flex-direction: row;
+  width: 37px;
+  height: 38px;
+  border-radius: 50%;
+}
 .search {
   display: flex;
   flex-direction: row;
+  width: 20rem;
+  height: 2rem;
+  
 }
+
 .Logo {
   height: 40px;
   width: 40px;
+  padding:5px;
 }
 .Main {
   display: flex;
@@ -82,14 +122,15 @@
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
-  width: 375px
+  width: cover
 }
 
 .image {
-  width: 90px;
+  display:flex ;
+  width: 200px;
   height: 120px;
-  padding: 0.5rem;
-  border-radius: 5rem;
+  border-radius: 500rem;
+  padding: 5vh 5vw;
   
 }
 .div{
@@ -99,7 +140,7 @@
 }
 .centered {
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -107,6 +148,7 @@
   position: relative;
   text-align: center;
   color: white;
+  
 }
 .collectionImage {
   width: 360px;
@@ -131,7 +173,7 @@
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
-  width: 375px
+  width: cover;
 }
 .nftContainer {
   position: relative;
@@ -243,4 +285,273 @@
 }
 .sellCont {
   padding: 1rem;
+}
+
+@media all and (max-width: 500px) {
+
+
+
+  .App {
+    display: flex;
+  }
+  .link {
+    text-decoration: none;
+    color: red;
+  }
+  .Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    border: 2px solid black;
+    height: 50px;
+    background: black;
+    color: white;
+    z-index: 2;
+  }
+  #dropLog {
+    display: flex;
+    flex-direction: row;
+  }
+  #loginIcon {
+    display: flex;
+    flex-direction: row;
+    width: 37px;
+    height: 38px;
+  }
+  #searchIcon {
+    width: 40px;
+    height: 30px;
+  }
+  .search {
+    display: flex;
+    flex-direction: row;
+    padding: 4.5px 15px;
+    width: 45vw;
+    height: 5vh;
+    
+  }
+  .Logo {
+    height: 40px;
+    width: 40px;
+  }
+  .Main {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .dropDownIcon {
+    margin-top: 5px;
+    height: 50px;
+    width: 50px;
+  }
+  
+  .dropDownContent {
+    display: none;
+  }
+  
+  .show {
+    display: flex;
+    flex-direction: column;
+    position:fixed;
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+  }
+  .show:hover {
+    background-color: lightgray;
+    z-index: 2;
+  }
+  .footerContainer{
+    padding-top: 5rem;
+  }
+  .Footer{
+    display: flex;
+    position: fixed;
+    padding-top: 2%;
+    bottom: 0;
+    justify-content: space-evenly;
+    width: 100%;
+    border: 2px solid black;
+    height: 50px;
+    background: black;
+    color: white;
+  
+  }
+  .imageContainer {
+    /* padding: 1rem; */
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 375px
+  }
+  
+  .image {
+    width: 90px;
+    height: 120px;
+    padding: 0.5rem;
+    border-radius: 5rem;
+    
+  }
+  .div{
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  .centered {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .collection {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  .collectionImage {
+    width: 360px;
+    height: 250px;
+    padding: 0.5rem;
+    border-radius: 5rem;
+  }
+  .collectionField {
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    color: white
+  }
+  .featuredImage {
+    width: 250px;
+    height: 250px;
+    padding: 0.5rem;
+    border-radius: 5rem;
+  }
+  .recentContainer {
+    padding-bottom: 4rem;
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 375px
+  }
+  .nftContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 375px;
+    background: white;
+    border-radius: 0rem 0rem 2rem 2rem;
+    
+  }
+  .nftMain {
+    width: 375px;
+    height: 500px;
+  
+  }
+  .price {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: start;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 80px;
+    background: white;
+    border-radius: 0rem 0rem 2rem 2rem;
+    text-align: center;
+    font-size: 25px;
+    border-bottom: 2px solid black;
+    padding-bottom: 1rem;;
+  }
+  .buyNFT {
+    background: green;
+    padding: 0.5rem;
+    width: 100px;
+    margin-left: 130px;
+  }
+  .buyNFT:hover{
+    background: grey;
+    color: white;
+  }
+  .buyLink{
+    text-decoration: none;
+    color: white;
+  }
+  .detailsContainer {
+    background: white;
+    border-radius: 0rem 0rem 2rem 2rem;
+    border-bottom: 2px solid black;
+    
+  }
+  .show1 {
+    display: block;
+    background-color: black;
+    border-radius: 0rem 0rem 2rem 2rem;
+    border-bottom: 2px solid black;
+    color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .similarContainer{
+    padding-top: 2rem;
+  }
+  .loginContainer {
+    margin-top: 50px;
+    width: 375px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border: 2px solid black;
+    background: white
+  }
+  .formDiv{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .input {
+    width: 200px;
+    margin-bottom: 5px;
+  }
+  .loginBtn {
+    width: 100px
+  }
+  .trophyDiv{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 375px;
+    background: white;
+    border-radius: 1rem 1rem 2rem 2rem;
+    
+  }
+  
+  .trophyImage {
+    width: 375px;
+    height: 500px;
+    border-radius: 1rem 1rem 0rem 0rem;
+  }
+  .sellBtn {
+    background: green;
+    padding: 0.5rem;
+    width: 100px;
+    margin-left: 115px;
+  }
+  .sellCont {
+    padding: 1rem;
+  }
+
 }
