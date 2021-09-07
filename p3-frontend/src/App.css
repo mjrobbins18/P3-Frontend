@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
 
 .App {
+ 
   display: flex;
+  max-width: 1500px;
   font-family: 'Ubuntu', sans-serif;
 }
+
 @media (min-width: 376px) and (max-width: 500px) {
 
 .link {
@@ -170,7 +173,7 @@
   position: relative;
   text-align: center;
   color: white;
-  
+  max-width: 20%;
 }
 .collectionImage {
   width: 360px;
@@ -182,7 +185,8 @@
   border-bottom: none;
   border-left: none;
   border-right: none;
-  color: white
+  color: white;
+  max-width: 1500px;
 }
 .featuredImage {
   width: 250px;
@@ -200,7 +204,7 @@
 .nftContainer {
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
   width: 375px;
   background: rgb(44,121,119);
@@ -208,6 +212,11 @@
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   color: white;
   
+}
+#featNFT {
+  width: 5%;
+  height: 5%;
+  justify-content: center;
 }
 .nftMain {
   width: 375px;
@@ -501,7 +510,8 @@
     border-bottom: none;
     border-left: none;
     border-right: none;
-    color: white
+    color: white;
+    max-width: 1500px;
   }
   .featuredImage {
     width: 250px;
