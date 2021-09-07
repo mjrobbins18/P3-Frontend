@@ -4,7 +4,7 @@ import { DataContext } from './DataContext';
 
 function PriceFilter(props) {
 
-    const {formStateMinMax,
+    const {
             setFormStateMinMax,
             inputMinMax,
             setInputMinMax,
