@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
 
 .App {
   display: flex;
+  font-family: 'Ubuntu', sans-serif;
 }
+@media all and (min-width: 500px) {
+
 .link {
   text-decoration: none;
-  color: red;
+  color:white;
 }
 .Header {
   display: flex;
@@ -12,24 +16,28 @@
   justify-content: space-between;
   position: fixed;
   width: 100%;
-  border: 2px solid black;
-  height: 40px;
+  height: 50px;
   background: rgb(23,37,41);
   color: white;
   z-index: 2;
 }
-#dropLog {
+.maxHeader {
+  display: none;
+}
+.iconDiv {
   display: flex;
   flex-direction: row;
-  width: 10vw;
-  height: 10hw;
-  padding: 0px 20px 0 0px;
+  justify-content: space-between;
+  margin-right: 50px;
+  margin-top: 5px;
+  
 }
 #loginIcon {
   display: flex;
   flex-direction: row;
   width: 37px;
   height: 38px;
+  margin-left: 15px;
 }
 #searchIcon {
   width: 40px;
@@ -41,27 +49,39 @@
   flex-direction: row;
   width: 37px;
   height: 38px;
+  margin-left: 15px;
 }
 #createIcon {
   display: flex;
   flex-direction: row;
   width: 37px;
   height: 38px;
-  border-radius: 50%;
+  margin-left: 15px;
 }
 #aboutIcon {
   display: flex;
   flex-direction: row;
-  width: 37px;
-  height: 38px;
-  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-left: 15px;
+ 
+}
+.searchIcon{
+  
+  height: 30px;
+  width: 30px;
+  background: white;
+  border: none;
 }
 .search {
   display: flex;
   flex-direction: row;
   width: 20rem;
-  height: 2rem;
-  
+  margin-top: 7px;
+}
+.searchBar {
+  height: 28px;
+  border: none;
 }
 
 .Logo {
@@ -114,6 +134,9 @@
   background:rgb(23,37,41);
   color: white;
 
+}
+.hide {
+  display: none;
 }
 .imageContainer {
   /* padding: 1rem; */
@@ -288,6 +311,610 @@
 .sellCont {
   padding: 1rem;
 }
+}
+@media all and (min-width: 800px) {
+
+  .link {
+    text-decoration: none;
+    color:white;
+  }
+  .Header {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background: rgb(23,37,41);
+    color: white;
+    z-index: 2;
+  }
+  .maxHeader {
+    display: none;
+  }
+  .iconDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 50px;
+    margin-top: 5px;
+    margin-left: 50px;
+    
+  }
+  #loginIcon {
+    display: flex;
+    flex-direction: row;
+    width: 37px;
+    height: 38px;
+    margin-left: 50px;
+  }
+  #searchIcon {
+    width: 40px;
+    height: 30px;
+    display: none;
+  }
+  #trophyIcon {
+    display: flex;
+    flex-direction: row;
+    width: 37px;
+    height: 38px;
+    margin-left: 50px;
+  }
+  #createIcon {
+    display: flex;
+    flex-direction: row;
+    width: 37px;
+    height: 38px;
+    margin-left: 50px;
+  }
+  #aboutIcon {
+    display: flex;
+    flex-direction: row;
+    width: 40px;
+    height: 40px;
+    margin-left: 50px;
+   
+  }
+  .searchIcon{
+    
+    height: 30px;
+    width: 30px;
+    background: white;
+    border: none;
+  }
+  .search {
+    display: flex;
+    flex-direction: row;
+    width: 20rem;
+    margin-top: 7px;
+    margin-left: 100px;
+  }
+  .searchBar {
+    height: 28px;
+    border: none;
+  }
+  
+  .Logo {
+    height: 40px;
+    width: 40px;
+    padding:5px;
+  }
+  .Main {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .dropDownIcon {
+    margin-top: 5px;
+    height: 50px;
+    width: 50px;
+  }
+  
+  .dropDownContent {
+    display: none;
+  }
+  
+  .show {
+    display: flex;
+    flex-direction: column;
+    position:fixed;
+    background-color: rgb(23,37,41);
+    color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+  }
+  .show:hover {
+    background-color: rgb(222,241,241);
+    z-index: 2;
+  }
+  .footerContainer{
+    padding-top: 5rem;
+  }
+  .Footer{
+    display: flex;
+    position: fixed;
+    padding-top: 2%;
+    bottom: 0;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 50px;
+    background:rgb(23,37,41);
+    color: white;
+  
+  }
+  .hide {
+    display: none;
+  }
+  .imageContainer {
+    /* padding: 1rem; */
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: cover
+  }
+  
+  .image {
+    display:flex ;
+    width: 200px;
+    height: 120px;
+    border-radius: 500rem;
+    padding: 5vh 5vw;
+    
+  }
+  .div{
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  .centered {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .collection {
+    position: relative;
+    text-align: center;
+    color: white;
+    
+  }
+  .collectionImage {
+    width: 360px;
+    height: 250px;
+    padding: 0.5rem;
+    border-radius: 5rem;
+  }
+  .collectionField {
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    color: white
+  }
+  .featuredImage {
+    width: 250px;
+    height: 250px;
+    padding: 0.5rem;
+    border-radius: 5rem;
+  }
+  .recentContainer {
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: cover;
+  }
+  .nftContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 375px;
+    background: rgb(44,121,119);
+    border-radius: 0rem 0rem 2rem 2rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    color: white;
+    
+  }
+  .nftMain {
+    width: 375px;
+    height: 500px;
+  
+  }
+  .price {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: start;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 80px;
+    background: rgb(44,121,119);
+    border-radius: 0rem 0rem 2rem 2rem;
+    text-align: center;
+    font-size: 25px;
+    padding-bottom: 1rem;;
+    color: white
+  }
+  .buyNFT {
+    background: rgb(132,206,235);
+    padding: 0.5rem;
+    width: 100px;
+    margin-left: 130px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  .buyNFT:hover{
+    background: rgb(136,96,207);
+    color: white;
+  }
+  .buyLink{
+    text-decoration: none;
+    color: white;
+  }
+  .detailsContainer {
+    background: rgb(58,175,168);
+    border-radius: 0rem 0rem 2rem 2rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    
+  }
+  .show1 {
+    display: block;
+    background-color: rgb(23,37,41);
+    border-radius: 0rem 0rem 2rem 2rem;
+    border-bottom: 2px solid black;
+    color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .similarContainer{
+    padding-top: 2rem;
+  }
+  .loginContainer {
+    margin-top: 50px;
+    width: 375px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    
+    background: white
+  }
+  .formDiv{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .input {
+    width: 200px;
+    margin-bottom: 5px;
+  }
+  .loginBtn {
+    width: 100px
+  }
+  .trophyDiv{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 375px;
+    background: white;
+    border-radius: 1rem 1rem 2rem 2rem;
+    
+  }
+  
+  .trophyImage {
+    width: 375px;
+    height: 500px;
+    border-radius: 1rem 1rem 0rem 0rem;
+  }
+  .sellBtn {
+    background: green;
+    padding: 0.5rem;
+    width: 100px;
+    margin-left: 115px;
+  }
+  .sellCont {
+    padding: 1rem;
+  }
+  }
+  @media all and (min-width: 1000px) {
+
+    .link {
+      text-decoration: none;
+      color:white;
+    }
+    .Header {
+      display: flex;
+      flex-direction: row;
+      position: fixed;
+      width: 100%;
+      height: 50px;
+      background: rgb(23,37,41);
+      color: white;
+      z-index: 2;
+    }
+    .maxHeader{
+      display: flex;
+      padding-left: 10rem;
+    }
+    .iconDiv {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-right: 50px;
+      margin-top: 5px;
+      margin-left: 50px;
+      
+    }
+    #loginIcon {
+      display: none;
+
+    }
+    #searchIcon {
+      display: none;
+    }
+    #trophyIcon {
+      display: none;
+    }
+    #createIcon {
+      display: none;
+    }
+    #aboutIcon {
+      display: none;
+     
+    }
+    .searchIcon{
+      
+      height: 30px;
+      width: 30px;
+      background: white;
+      border: none;
+    }
+    .search {
+      display: flex;
+      flex-direction: row;
+      width: 20rem;
+      margin-top: 7px;
+    }
+    .searchBar {
+      height: 28px;
+      border: none;
+    }
+    
+    .Logo {
+      height: 40px;
+      width: 40px;
+      padding:5px;
+    }
+    .Main {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      text-align: center;
+      margin-top: 50px;
+    }
+    
+    .dropDownIcon {
+      margin-top: 5px;
+      height: 50px;
+      width: 50px;
+    }
+    
+    .dropDownContent {
+      display: none;
+    }
+    
+    .show {
+      display: flex;
+      flex-direction: column;
+      position:fixed;
+      background-color: rgb(23,37,41);
+      color: white;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 2;
+    }
+    .show:hover {
+      background-color: rgb(222,241,241);
+      z-index: 2;
+    }
+    .footerContainer{
+      padding-top: 5rem;
+    }
+    .Footer{
+      display: flex;
+      position: fixed;
+      padding-top: 2%;
+      bottom: 0;
+      justify-content: space-evenly;
+      width: 100%;
+      height: 50px;
+      background:rgb(23,37,41);
+      color: white;
+    
+    }
+    .hide {
+      display: none;
+    }
+    .imageContainer {
+      /* padding: 1rem; */
+      margin-top: 2%;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      width: cover
+    }
+    
+    .image {
+      display:flex ;
+      width: 200px;
+      height: 120px;
+      border-radius: 500rem;
+      padding: 5vh 5vw;
+      
+    }
+    .div{
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+    .centered {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .collection {
+      position: relative;
+      text-align: center;
+      color: white;
+      
+    }
+    .collectionImage {
+      width: 360px;
+      height: 250px;
+      padding: 0.5rem;
+      border-radius: 5rem;
+    }
+    .collectionField {
+      border-bottom: none;
+      border-left: none;
+      border-right: none;
+      color: white
+    }
+    .featuredImage {
+      width: 250px;
+      height: 250px;
+      padding: 0.5rem;
+      border-radius: 5rem;
+    }
+    .recentContainer {
+      margin-top: 2%;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      width: cover;
+    }
+    .nftContainer {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 375px;
+      background: rgb(44,121,119);
+      border-radius: 0rem 0rem 2rem 2rem;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      color: white;
+      
+    }
+    .nftMain {
+      width: 375px;
+      height: 500px;
+    
+    }
+    .price {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: start;
+      margin-bottom: 20px;
+      width: 100%;
+      height: 80px;
+      background: rgb(44,121,119);
+      border-radius: 0rem 0rem 2rem 2rem;
+      text-align: center;
+      font-size: 25px;
+      padding-bottom: 1rem;;
+      color: white
+    }
+    .buyNFT {
+      background: rgb(132,206,235);
+      padding: 0.5rem;
+      width: 100px;
+      margin-left: 130px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+    .buyNFT:hover{
+      background: rgb(136,96,207);
+      color: white;
+    }
+    .buyLink{
+      text-decoration: none;
+      color: white;
+    }
+    .detailsContainer {
+      background: rgb(58,175,168);
+      border-radius: 0rem 0rem 2rem 2rem;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      
+    }
+    .show1 {
+      display: block;
+      background-color: rgb(23,37,41);
+      border-radius: 0rem 0rem 2rem 2rem;
+      border-bottom: 2px solid black;
+      color: white;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    .similarContainer{
+      padding-top: 2rem;
+    }
+    .loginContainer {
+      margin-top: 50px;
+      width: 375px;
+      height: 600px;
+      display: flex;
+      justify-content: center;
+      justify-content: space-evenly;
+      flex-direction: column;
+      
+      background: white
+    }
+    .formDiv{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+    
+    .input {
+      width: 200px;
+      margin-bottom: 5px;
+    }
+    .loginBtn {
+      width: 100px
+    }
+    .trophyDiv{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 375px;
+      background: white;
+      border-radius: 1rem 1rem 2rem 2rem;
+      
+    }
+    
+    .trophyImage {
+      width: 375px;
+      height: 500px;
+      border-radius: 1rem 1rem 0rem 0rem;
+    }
+    .sellBtn {
+      background: green;
+      padding: 0.5rem;
+      width: 100px;
+      margin-left: 115px;
+    }
+    .sellCont {
+      padding: 1rem;
+    }
+    }
+  
+
 
 @media all and (max-width: 375px) {
 
@@ -298,7 +925,7 @@
   }
   .link {
     text-decoration: none;
-    color: red;
+    color: white;
   }
   .Header {
     display: flex;
@@ -311,6 +938,9 @@
     background: rgb(23,37,41);
     color: white;
     z-index: 2;
+  }
+  .maxHeader {
+    display: none;
   }
   #dropLog {
     display: flex;
@@ -327,13 +957,26 @@
     height: 30px;
     display: none;
   }
+  .hideIcons {
+    display: none;
+  }
+  .searchIcon{
+    height: 40px;
+    width: 30px;
+    background: white;
+    border: none;
+
+  }
   .search {
     display: flex;
     flex-direction: row;
-    padding: 4.5px 15px;
+    margin-top: 5px;
     width: 45vw;
-    height: 5vh;
-    
+    height: 40px;
+  }
+  .searchBar{
+    text-align: center;
+    border: none;
   }
   .Logo {
     height: 40px;
