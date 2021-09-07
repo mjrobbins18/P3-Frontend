@@ -6,7 +6,8 @@
   max-width: 1500px;
   font-family: 'Ubuntu', sans-serif;
 }
-@media all and (max-width: 1500px) {
+
+@media (min-width: 376px) and (max-width: 500px) {
 
 .link {
   text-decoration: none;
@@ -122,9 +123,11 @@
   background-color: rgb(222,241,241);
   z-index: 2;
 }
+
 .footerContainer{
   padding-top: 5rem;
 }
+
 .Footer{
   display: flex;
   position: fixed;
@@ -135,14 +138,16 @@
   height: 50px;
   background:rgb(23,37,41);
   color: white;
-
 }
-.hide {
-  display: none;
+.hide{
+  display:none;
 }
 .imageContainer {
-  display: none;
-  
+  margin-top: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  width: cover;
 }
 
 .image {
@@ -192,8 +197,9 @@
 .recentContainer {
   margin-top: 2%;
   display: flex;
-  max-width: 20%;
-  justify-content:space-around ;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  width: cover;
 }
 .nftContainer {
   position: relative;
@@ -315,7 +321,7 @@
   padding: 1rem;
 }
 }
-@media all and (min-width: 800px) {
+@media (min-width: 501px) and (max-width: 800px) {
 
   .link {
     text-decoration: none;
@@ -343,7 +349,17 @@
     margin-left: 50px;
     
   }
-  #loginIcon {
+  .hideText {
+    display: none;
+  }
+  .headerIcons{
+    display: flex;
+    flex-direction: row;
+    width: 37px;
+    height: 38px;
+    margin-left: 50px;
+  }
+  /* #loginIcon {
     display: flex;
     flex-direction: row;
     width: 37px;
@@ -376,7 +392,7 @@
     height: 40px;
     margin-left: 50px;
    
-  }
+  } */
   .searchIcon{
     
     height: 30px;
@@ -453,9 +469,9 @@
   .imageContainer {
     /* padding: 1rem; */
     margin-top: 2%;
-    display: grid;
+    display: flex;
     flex-wrap: wrap;
-    overflow-x: hidden;
+    overflow-x: auto;
     width: cover
   }
   
@@ -506,7 +522,7 @@
   .recentContainer {
     margin-top: 2%;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     overflow-x: auto;
     width: cover;
   }
@@ -625,7 +641,7 @@
     padding: 1rem;
   }
   }
-  @media all and (min-width: 1000px) {
+  @media (min-width: 801px) and (max-width: 2000px) {
 
     .link {
       text-decoration: none;
@@ -747,9 +763,13 @@
       /* padding: 1rem; */
       margin-top: 2%;
       display: flex;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
       overflow-x: auto;
-      width: cover
+      width: cover;
+      max-width: 2000px;
+    }
+    .container {
+      display: none;
     }
     
     .image {
@@ -787,6 +807,7 @@
       border-bottom: none;
       border-left: none;
       border-right: none;
+      max-width: 1500px;
       color: white
     }
     .featuredImage {
@@ -798,9 +819,10 @@
     .recentContainer {
       margin-top: 2%;
       display: flex;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
       overflow-x: auto;
       width: cover;
+      max-width: 2000px;
     }
     .nftContainer {
       position: relative;
@@ -943,6 +965,9 @@
     color: white;
     z-index: 2;
   }
+  .hideIcons {
+    display: none;
+  }
   .maxHeader {
     display: none;
   }
@@ -950,22 +975,40 @@
     display: flex;
     flex-direction: row;
   }
-  #loginIcon {
+ 
+  #loginIconFoot {
     display: flex;
     flex-direction: row;
-    width: 37px;
-    height: 38px;
+    width: 40px;
+    height: 30px;
   }
+  #trophyIconFoot {
+    display: flex;
+    flex-direction: row;
+    width: 30px;
+    height: 30px;
+  }
+  #createIconFoot{
+    display: flex;
+    flex-direction: row;
+    width: 30px;
+    height: 30px;
+  }
+  #aboutIconFoot{
+    display: flex;
+    flex-direction: row;
+    width: 30px;
+    height: 30px;
+  }
+
   #searchIcon {
     width: 40px;
     height: 30px;
     display: none;
   }
-  .hideIcons {
-    display: none;
-  }
+
   .searchIcon{
-    height: 40px;
+    height: 37px;
     width: 30px;
     background: white;
     border: none;
@@ -977,10 +1020,12 @@
     margin-top: 5px;
     width: 45vw;
     height: 40px;
+    margin-right: 20px;
   }
   .searchBar{
     text-align: center;
     border: none;
+    height: 35px
   }
   .Logo {
     height: 40px;
@@ -1020,6 +1065,7 @@
   }
   .footerContainer{
     padding-top: 5rem;
+    position: fixed;
   }
   .Footer{
     display: flex;
@@ -1094,12 +1140,14 @@
   }
   .nftContainer {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 375px;
-    background: white;
-    border-radius: 0rem 0rem 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 375px;
+      background: rgb(44,121,119);
+      border-radius: 0rem 0rem 2rem 2rem;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      color: white;
     
   }
   .nftMain {
@@ -1115,18 +1163,16 @@
     margin-bottom: 20px;
     width: 100%;
     height: 80px;
-    background: white;
+    background: rgb(58,175,168);
     border-radius: 0rem 0rem 2rem 2rem;
     text-align: center;
     font-size: 25px;
-    border-bottom: 2px solid black;
     padding-bottom: 1rem;;
   }
   .buyNFT {
     background: green;
-    padding: 0.5rem;
-    width: 100px;
-    margin-left: 130px;
+    width: 200px;
+    margin-left: 75px;
   }
   .buyNFT:hover{
     background: grey;
@@ -1137,9 +1183,10 @@
     color: white;
   }
   .detailsContainer {
-    background: white;
-    border-radius: 0rem 0rem 2rem 2rem;
-    border-bottom: 2px solid black;
+      background: rgb(58,175,168);
+      border-radius: 0rem 0rem 2rem 2rem;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      
     
   }
   .show1 {
