@@ -11,7 +11,7 @@ import mountain from './Images/mountain.jpg'
 
 function Browse(props) {
     return (
-        <div>
+        <div >
        
         <div className = "imageContainer">
             <div className = "div">
