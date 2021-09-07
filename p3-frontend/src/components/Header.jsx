@@ -3,17 +3,33 @@ import Dropdown from './Dropdown';
 import SearchBar from './SearchBar';
 import rocket from './Images/rocket.png'
 import trophy from './Images/trophy.png'
+import nftIcon from './Images/NFT_Icon.png'
 import { Link } from 'react-router-dom'
+import profile from './Images/—Pngtree—vector edit profile icon_4102545.png'
+import plusIcon from './Images/plusIcon.png'
+import aboutIcon from './Images/aboutIcon.svg'
 
 function Header(props) {
 
     return (
         <div className = "Header">
-            <Link to = '/'><img className = "Logo" src = "https://lh3.googleusercontent.com/UiF_88MADFIHbCZp88RlGbCRDX3exmR4FOg_u4XMqwmXglbmbOFq26F3XdgTgPX4PwZ5BpaViXQ9KfljhLfZci-1NJzSc1tLL_QV=s130" alt = "rocket logo"/></Link>
+             
+            <Link to = '/'><img className = "Logo" src = { nftIcon } alt = "rocket logo"/></Link>
+            <div className = "iconDiv hideIcons">
+            <Link to = '/trophies'className= "footerIcons" id="trophyIcon"> <img src= {trophy} alt="Trophies"/> </Link>
+             <Link to = '/create' className= "footerIcons" id= "createIcon"><img src= { plusIcon } alt="Create NFT"/></Link>
+             <Link to = '/about' className= "footerIcons" id= "aboutIcon"><img src={ aboutIcon }  alt="About"/></Link>
+             <Link to = '/Login' className= "footerIcons" id= "loginIcon"><img src = { profile } alt= ""/></Link>
+             <Link to = '/trophies'className= "maxHeader link">Trophies </Link>
+             <Link to = '/create' className= "maxHeader link">Create NFT</Link>
+             <Link to = '/about' className= "maxHeader link">About</Link>
+             <Link to = '/Login' className= "maxHeader link">Login</Link>
+             </div>
             <SearchBar/>
-            <div id= "dropLog">
-            <Dropdown/>
-            </div>
+            {/* <Dropdown/> */}
+           
+           
+           
             {/* added div to try to keep organized on header */}
             
         </div>
