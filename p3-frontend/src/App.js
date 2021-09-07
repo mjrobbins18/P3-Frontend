@@ -15,7 +15,8 @@ const loginState = {
   buyOrLogin: "/login"
 }
 
-
+const [searchState, setSearchState] = ("")
+const [formState, setFormState] = ("")
 const [random, setRandom] = useState([])
 const [collection, setCollection] = useState([])
 const [formStateMinMax, setFormStateMinMax] = useState(initialStateMinMax)
@@ -45,7 +46,11 @@ const collectUrl = "http://localhost:8000/nftmarketplace/collection"
                                       random,
                                       setRandom,
                                       collection,
-                                      setCollection}}>
+                                      setCollection,
+                                      searchState,
+                                      setSearchState,
+                                      formState,
+                                      setFormState}}>
         <Landing/>
       </DataContext.Provider>
     </div>
