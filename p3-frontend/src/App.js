@@ -23,9 +23,9 @@ const [formStateMinMax, setFormStateMinMax] = useState(initialStateMinMax)
 const [inputMinMax, setInputMinMax] = useState(initialStateMinMax)
 const [loggedIn, setLoggedIn] = useState(loginState)
 
-const url = "http://localhost:8000/nftmarketplace"
+const url = "http://localhost:8000/nftmarketplace/"
 const collectUrl = "http://localhost:8000/nftmarketplace/collection"
-
+console.log(random)
     useEffect(() => {
         fetch(url).then(res => res.json()).then(res=>setRandom(res)).catch(console.error)
     },[])
