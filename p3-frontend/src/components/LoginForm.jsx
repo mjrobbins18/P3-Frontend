@@ -6,9 +6,9 @@ function LoginForm(props) {
     return (
         <div className = "formDiv">
             <form className = "loginForm">
-                <input className = "input" type = "text"/>
-                <input className = "input" type = "password"/><br></br>
-                <button className = "loginBtn">Log in</button>
+                <input className = "input" type = "text" placeholder = "Username" />
+                <input className = "input" type = "password" placeholder = "Password"/><br></br>
+                <div className = "loginBtn">Log in</div>
             </form>
             <p>New User? Click Below:</p>
             <div>

@@ -9,13 +9,34 @@
 
 
 @media (min-width: 376px) and (max-width: 500px) {
+  .container{
+    display: none;
+  }
+  .featDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: cover;
+  }
+  #introtxt {
+    height: 200px;
+    width: 370px;
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap:wrap;
+    text-align: left;
+    max-width: 100%;
+    margin-left: 60px;
+    margin-top: 50px;
+    }
+
   .featContainer{
     width: 1000px;
     position: relative;
     display: flex;
     justify-content: space-between;
     flex-wrap:wrap;
-    
+    margin-left: 10%;
+    padding-bottom: 15%;
   }
   
   .featContainer .card{
@@ -23,8 +44,8 @@
   }
   
   .featContainer .card .face{
-    width:300px;
-    height: 200px;
+    width:350px;
+    height: 250px;
     transition:.4s;
     
   }
@@ -107,6 +128,9 @@
     margin: 0 ;
     padding: 0;
     color:#333;
+  }
+  .content{
+    margin-top: 20%;
   }
   
   .featContainer .card .face.face2 .content a{
@@ -445,12 +469,34 @@
 }
 }
 @media (min-width: 501px) and (max-width: 800px) {
+  .container{
+    display: none;
+  }
+  .featDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: cover;
+  }
+  #introtxt {
+    height: 200px;
+    width: 570px;
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap:wrap;
+    text-align: left;
+    max-width: 100%;
+    margin-left: 60px;
+    margin-top: 50px;
+    }
+
   .featContainer{
     width: 1000px;
     position: relative;
     display: flex;
     justify-content: space-between;
     flex-wrap:wrap;
+    margin-left: 20%;
+    padding-bottom: 5%;
     
   }
   
@@ -459,8 +505,8 @@
   }
   
   .featContainer .card .face{
-    width:300px;
-    height: 200px;
+    width:400px;
+    height: 300px;
     transition:.4s;
     
   }
@@ -1033,6 +1079,9 @@
       text-decoration: none;
       color:white;
     }
+    .link:hover {
+      color:rgb(181, 4, 216)
+    }
     .Header {
       display: flex;
       flex-direction: row;
@@ -1048,11 +1097,13 @@
       margin-top: 18px;
       height: 15px;
       width: 15px;
+      cursor: pointer;
     }
     .downArrow {
       margin-top: 12px;
       height: 25px;
       width: 17px;
+      cursor: pointer;
     }
     .iconDiv {
       display: flex;
@@ -1087,6 +1138,7 @@
       background: white;
       border: none;
       border-radius: 0rem 1rem 1rem 0rem;
+      cursor: pointer;
       
 
     }
@@ -1095,7 +1147,7 @@
       flex-direction: row;
       margin-top: 7px;
       width: 500px;
-      margin-left: 350px;
+      margin-left: 70%;
       border-radius: 1rem 1rem 1rem 1rem;
       border-bottom: 1px solid #0ff;
       
@@ -1125,6 +1177,7 @@
       height: 40px;
       width: 40px;
       padding:5px;
+      cursor: pointer;
     }
     .Main {
       display: flex;
@@ -1142,7 +1195,7 @@
       position:absolute;
       margin-top: 10px;
       margin-left: -3.2rem;
-      background-color: rgb(23,37,41);
+      background-color: #0ff;
       box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
       z-index: 2;
     }
@@ -1323,8 +1376,17 @@
       justify-content: center;
       justify-content: space-evenly;
       flex-direction: column;
-      
-      background: white
+      margin-left: 70%;
+      background: white;
+      box-shadow:
+      inset 0 0 60px whitesmoke,
+      inset 20px 0 80px #f0f,
+      inset -20px 0 80px #0ff,
+      inset 20px 0 300px #f0f,
+      inset -20px 0 300px #0ff,
+      0 0 50px #fff,
+      -10px 0 80px #f0f,
+      10px 0 80px #0ff;
     }
     .formDiv{
       display: flex;
@@ -1334,10 +1396,26 @@
     
     .input {
       width: 200px;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
+      padding: 0.5rem;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      border: none;
+    }
+    .input:focus::placeholder {
+      color: transparent;
     }
     .loginBtn {
-      width: 100px
+      width: 100px;
+      margin-left: 35%;
+      background: #f0f;
+      padding: 0.5rem;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+
+    .loginBtn:hover {
+      background: #0ff;
     }
     .trophyDiv{
       position: relative;
