@@ -15,7 +15,7 @@ function Random(props) {
             return (
                 <div>
                     <Link to = {`/NFT/${item._id}`}>
-                        <img className = "collectionImage" src = { item.image_preview_url} alt = { item.name }/>
+                        <img className = "collectionImage" src = { item.image_url} alt = { item.name }/>
                     </Link>
                 </div> 
             )

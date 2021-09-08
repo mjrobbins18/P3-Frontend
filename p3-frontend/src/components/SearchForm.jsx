@@ -20,6 +20,7 @@ const handleChange = (event) => {
     return (
         <div >
            <form className = "search">
+               
                <input className = "searchBar" type = "text" placeholder = "Explore"/>
                <div>
                     <img className = "searchIcon" src = { searchIcon } alt = "searchIcon"/>
