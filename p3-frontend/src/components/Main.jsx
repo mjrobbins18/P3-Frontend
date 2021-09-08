@@ -9,7 +9,9 @@ import Introtxt from './Introtxt';
 function Main(props) {
     return (
         <div>
+            <div className ="hideFeat">
             <FeaturedNFT/>
+            </div>
             <div>
                 
             
