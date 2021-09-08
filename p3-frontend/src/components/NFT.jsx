@@ -24,27 +24,62 @@ function NFT({ match }) {
     console.log(thisNFT)
 
     return (
-        <div>
-            <div className = "nftContainer" >
-                <h1>{ thisNFT[0].name}</h1>
-            <div className = "nftImg">
-                <img className = "nftMain" src = { thisNFT[0].image_url } alt = "mountain"/>
-            </div>
-            <div className = "price">
-                Price: $20340923
-                <div className = "buyNFT">
-                    <Link className = "buyLink" to = { loggedIn.buyOrLogin } onClick = { checkLogin }>Buy Now</Link>
-                </div>
-            </div>
-            <div className = "detailsContainer">
-            <Details thisNFT = { thisNFT }/>
-            </div>
+<div className= "BuyDiv"> 
+
+    {/* <script src="https://kit.fontawesome.com/95a02bd20d.js"></script> */}
+        <div class="BuyContainer">
+            
+           <div class="card">
+           
+             <div class="face face1">
+             
+             
+                  <i class="fab fa-windows"></i>   
+                         
+                 <img id= "NFTfeat" src={ thisNFT[0].image_url } alt="" />
+               
+             </div>
+             <div class="face face2">
+               <div class="content">
+              
+             <Details thisNFT = { thisNFT }/>
+            
+                 <br></br>
+                 
+                     <Link className = "buyLink" to = { loggedIn.buyOrLogin } onClick = { checkLogin }>Buy Now</Link>
+               
+                 <br></br>
+                 <br></br>
+                 <br></br>
+                 <br></br>
+                 <h1>{ thisNFT[0].name}</h1>
+               </div>
+             </div>
+          </div>
+          </div>
+        </div>
+
+        // <div>
+        //     <div className = "nftContainer" >
+        //         <h1>{ thisNFT[0].name}</h1>
+        //     <div className = "nftImg">
+        //         <img className = "nftMain" src = { thisNFT[0].image_url } alt = "mountain"/>
+        //     </div>
+        //     <div className = "price">
+        //         Price: $20340923
+        //         <div className = "buyNFT">
+        //             <Link className = "buyLink" to = { loggedIn.buyOrLogin } onClick = { checkLogin }>Buy Now</Link>
+        //         </div>
+        //     </div>
+        //     <div className = "detailsContainer">
+        //     <Details thisNFT = { thisNFT }/>
+        //     </div>
             
            
-            </div>
-            <SimilarArt/>
+        //     </div>
+        //     <SimilarArt/>
           
-        </div>
+        // </div>
     );
 }
 

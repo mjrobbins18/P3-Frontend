@@ -4,16 +4,19 @@ import Collection from './Collection';
 import Featured from './Featured';
 import RecentlyAdded from './RecentlyAdded';
 import FeaturedNFT from './FeaturedNFT';
-
+import Introtxt from './Introtxt';
 
 function Main(props) {
     return (
         <div>
+            
             <div>
-                <div className = "hideFeat">
+            <div id= "introdiv">
+                <div  className = "hideFeat">
+                <Introtxt/>
                 <FeaturedNFT/>
                 </div>
-                
+                </div>
                 <Browse/>
                 <Collection/>
                 <Featured/>
