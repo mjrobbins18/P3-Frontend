@@ -10,7 +10,10 @@ function Main(props) {
     return (
         <div>
             <div>
+                <div className = "hideFeat">
                 <FeaturedNFT/>
+                </div>
+                
                 <Browse/>
                 <Collection/>
                 <Featured/>
