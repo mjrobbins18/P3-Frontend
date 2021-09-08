@@ -6,9 +6,9 @@ function CreateUser(props) {
             <div className = "formDiv">
                 <h1>Create User</h1>
                 <form className = "loginForm">
-                    <input className = "input" type = "text"/>
-                    <input className = "input"  type = "password"/><br></br>
-                <button className = "loginBtn">Create Username</button>
+                    <input className = "input" type = "text" placeholder = "Username"/>
+                    <input className = "input"  type = "password" placeholder = "Password"/><br></br>
+                <div className = "loginBtn">Create Username</div>
             </form>
         </div>
         </div>
