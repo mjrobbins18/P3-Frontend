@@ -30,7 +30,7 @@
     }
 
   .featContainer{
-    width: 1000px;
+    width: 100%;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -490,7 +490,7 @@
     }
 
   .featContainer{
-    width: 1000px;
+    width: 100%;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -935,7 +935,7 @@
     padding: 1rem;
   }
   }
-  @media (min-width: 801px) and (max-width: 2000px) {
+@media (min-width: 801px) and (max-width: 2000px) {
     .featDiv {
       display: flex;
       flex-direction: row;
@@ -955,7 +955,7 @@
      
 
     .featContainer{
-      width: 1000px;
+      width: 100%;
       position: relative;
       display: flex;
       justify-content: space-between;
@@ -1443,9 +1443,6 @@
       padding: 1rem;
     }
     }
-  
-
-
 @media all and (max-width: 375px) {
 
 
