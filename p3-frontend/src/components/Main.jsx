@@ -12,9 +12,7 @@ function Main(props) {
             <FeaturedNFT/>
             </div>
             <div>
-                
-            
-                <Browse/>
+        
                 <Collection/>
                 <Featured/>
                 <RecentlyAdded/>
