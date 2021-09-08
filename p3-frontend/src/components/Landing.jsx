@@ -41,7 +41,7 @@ function Landing(props) {
                 </div>
                
             </main>
-            <footer className = "hide">
+            <footer>
                 <FooterNav/>
             </footer>
         </div>
