@@ -15,6 +15,7 @@ import Buy from './Buy';
 import NFTContainer from './NFTContainer';
 import RandomCont from './RandomCont';
 import CollectionInfo from './CollectionInfo';
+import CreateContainer from './CreateContainer';
 
 
 
@@ -31,7 +32,7 @@ function Landing(props) {
                 <Route exact path = "/browse" render = { RandomCont }/>
                 <Route exact path = "/about" render = { About }/>
                 <Route exact path = "/trophies" render = { Trophies }/>
-                <Route exact path = "/create" render = { CreateNFT }/>
+                <Route exact path = "/create" render = { CreateContainer }/>
                 <Route exact path = "/login" render = { Login }/>
                 <Route exact path = "/NFT/:id"  render = { routerProps => <NFTContainer match = { routerProps.match }/>}/>
                 <Route exact path = "/Collection/:id"  render = { routerProps => <CollectionInfo match = { routerProps.match }/>}/>
