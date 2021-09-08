@@ -5,6 +5,7 @@ import Featured from './Featured';
 import RecentlyAdded from './RecentlyAdded';
 import FeaturedNFT from './FeaturedNFT';
 
+
 function Main(props) {
     return (
         <div>
