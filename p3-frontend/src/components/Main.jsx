@@ -9,14 +9,10 @@ import Introtxt from './Introtxt';
 function Main(props) {
     return (
         <div>
-            
+            <FeaturedNFT/>
             <div>
-            <div id= "introdiv">
-                <div  className = "hideFeat">
-                <Introtxt/>
-                <FeaturedNFT/>
-                </div>
-                </div>
+                
+            
                 <Browse/>
                 <Collection/>
                 <Featured/>
