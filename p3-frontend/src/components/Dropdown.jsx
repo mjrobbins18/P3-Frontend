@@ -7,6 +7,8 @@ import downArrow from './Images/downArrow.png'
 import profile from './Images/—Pngtree—vector edit profile icon_4102545.png'
 import plusIcon from './Images/plusIcon.png'
 import aboutIcon from './Images/aboutIcon.svg'
+import whiteArrrow from './Images/whiteArrow.png'
+import whiteUpArrow from './Images/whiteUpArrow.png'
 // import dropDownIcon from './Images/dropdown.png'
 
 //great job max!!! incredible work!!!
@@ -26,7 +28,7 @@ function Dropdown(props) {
     if (dropDown === false){
         return (
             <div className = "Dropdown">
-                {!upArrow ? <img className = "upArrow" src = { upArrowPic } onClick = { clickArrow } alt = "uparrow"/> : <img className = "downArrow" src = { downArrow } onClick = { clickArrow } alt = "upArrow"/>} 
+                {!upArrow ? <img className = "upArrow" src = { whiteArrrow } onClick = { clickArrow } alt = "uparrow"/> : <img className = "downArrow" src = { downArrow } onClick = { clickArrow } alt = "upArrow"/>} 
                 <div className = "dropDownContent">
                 <div className = "hideText">
                  <div className = "dropBTN">
@@ -49,7 +51,7 @@ function Dropdown(props) {
     }else if(dropDown === true){
         return (
             <div className = "Dropdown">
-                {!upArrow ? <img className = "upArrow" src = { upArrowPic } onClick = { clickArrow } alt = "uparrow"/> : <img className = "downArrow" src = { downArrow } onClick = { clickArrow } alt = "upArrow"/>} 
+                {!upArrow ? <img className = "upArrow" src = { whiteUpArrow} onClick = { clickArrow } alt = "uparrow"/> : <img className = "downArrow" src = { downArrow } onClick = { clickArrow } alt = "upArrow"/>} 
             <div className = "show">
             <div className = "hideText">
             <div className = "dropBTN">

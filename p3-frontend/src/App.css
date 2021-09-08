@@ -6,37 +6,30 @@
   max-width: 1500px;
   font-family: 'Ubuntu', sans-serif;
 }
-
+#introH2 {
+  font-weight: 800;
+  color: rgb(129, 123, 123);
+  font-family: 'Lato', sans-serif;
+}
 
 @media (min-width: 376px) and (max-width: 500px) {
-  .container{
-    display: none;
-  }
   .featDiv {
     display: flex;
     flex-direction: column;
-    justify-content: cover;
+    width: 110%;
+    margin-left: 25vw;
+    
   }
-  #introtxt {
-    height: 200px;
-    width: 370px;
-    justify-content: space-evenly;
-    display: flex;
-    flex-wrap:wrap;
-    text-align: left;
-    max-width: 100%;
-    margin-left: 60px;
-    margin-top: 50px;
-    }
+#introtxt {
+  margin-top: 1vh;
+  margin-right: 40%;
+  margin-left: 10vh;
+}
 
   .featContainer{
-    width: 100%;
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap:wrap;
-    margin-left: 10%;
-    padding-bottom: 15%;
+    padding-bottom: 3%;
+    padding-top:0%
   }
   
   .featContainer .card{
@@ -44,9 +37,10 @@
   }
   
   .featContainer .card .face{
-    width:350px;
-    height: 250px;
+    width:70%;
+    height: 50%;
     transition:.4s;
+    margin-right: 19vh;
     
   }
   
@@ -128,9 +122,7 @@
     margin: 0 ;
     padding: 0;
     color:#333;
-  }
-  .content{
-    margin-top: 20%;
+    
   }
   
   .featContainer .card .face.face2 .content a{
@@ -152,486 +144,157 @@
    width: 95%;
    height: 95%
   }
-.link {
-  text-decoration: none;
-  color:white;
+/* buyNFT */
+#Buydiv{
+padding-left: 5%;
 }
-.Header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  position: fixed;
-  width: 100%;
-  height: 50px;
-  background: rgb(23,37,41);
-  color: white;
-  z-index: 2;
-}
-.upArrow {
-  display: none;
-}
-.downArrow {
-  display: none;
-}
-.maxHeader {
-  display: none;
-}
-.iconDiv {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-right: 50px;
-  margin-top: 5px;
-  
-}
-#loginIcon {
-  display: flex;
-  flex-direction: row;
-  width: 37px;
-  height: 38px;
-  margin-left: 15px;
+.BuyContainer{
+width: 1000px;
+position: relative;
+display: flex;
+justify-content: space-between;
+flex-wrap:wrap;
+margin-left: 90%;
+padding-bottom: 8%;
 }
 
-#searchIcon {
-  width: 40px;
-  height: 30px;
-  display: none;
+.BuyContainer .card{
+position: relative;
 }
-#trophyIcon {
-  display: flex;
-  flex-direction: row;
-  width: 37px;
-  height: 38px;
-  margin-left: 15px;
+
+.BuyContainer .card .face{
+width:600px;
+height: 400px;
+transition:.4s;
+
 }
-#createIcon {
-  display: flex;
-  flex-direction: row;
-  width: 37px;
-  height: 38px;
-  margin-left: 15px;
+
+.BuyContainer .card .face.face1{
+position: relative;
+background: #333;
+display: flex;
+justify-content: center;
+align-content:center;
+align-items: center;
+z-index: 1;
+transform: translateY(100px);
 }
-#aboutIcon {
-  display: flex;
-  flex-direction: row;
-  width: 40px;
-  height: 40px;
-  margin-left: 15px;
+
+.BuyContainer .card:hover .face.face1{
+transform: translateY(0);
+box-shadow:
+  inset 0 0 60px whitesmoke,
+  inset 20px 0 80px #f0f,
+  inset -20px 0 80px #0ff,
+  inset 20px 0 300px #f0f,
+  inset -20px 0 300px #0ff,
+  0 0 50px #fff,
+  -10px 0 80px #f0f,
+  10px 0 80px #0ff;
  
 }
-.searchIcon{
-  
-  height: 30px;
-  width: 30px;
-  background: white;
-  border: none;
-  border-radius: 0rem 1rem 1rem 0rem;
-}
-.search {
-  display: flex;
-  flex-direction: row;
-  width: 20rem;
-  margin-top: 7px;
-}
-.searchBar {
-  height: 28px;
-  border: none;
-  border-radius: 1rem 0rem 0rem 1rem;
-}
 
-.Logo {
-  height: 40px;
-  width: 40px;
-  padding:5px;
-}
-.Main {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  text-align: center;
-  margin-top: 50px;
-}
 
-.dropDownIcon {
-  margin-top: 5px;
-  height: 50px;
-  width: 50px;
-}
-
-.dropDownContent {
-  display: none;
-}
-
-.show {
-  display: flex;
-  flex-direction: column;
-  position:fixed;
-  background-color: rgb(23,37,41);
-  color: white;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 2;
-}
-.show:hover {
-  background-color: rgb(222,241,241);
-  z-index: 2;
-}
-
-.footerContainer{
-  padding-top: 5rem;
-  display: none;
-}
-
-.Footer{
-  display: flex;
-  position: fixed;
-  padding-top: 2%;
-  bottom: 0;
-  justify-content: space-evenly;
-  width: 100%;
-  height: 50px;
-  background:rgb(23,37,41);
-  color: white;
-}
-
-.imageContainer {
-  margin-top: 2%;
-  display: flex;
-  flex-wrap: wrap;
-  overflow-x: auto;
-  width: cover;
-}
-
-.image {
-  display:flex ;
-  width: 200px;
-  height: 120px;
-  border-radius: 500rem;
-  padding: 5vh 5vw;
-  
-}
-.div{
-  position: relative;
-  text-align: center;
-  color: white;
-}
-.centered {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.collection {
-  position: relative;
-  text-align: center;
-  color: white;
-  max-width: 20%;
-}
-.collectionImage {
-  width: 360px;
-  height: 250px;
-  padding: 0.5rem;
-  border-radius: 5rem;
-}
-.collectionField {
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
-  color: white;
-  max-width: 1500px;
-}
-.featuredImage {
-  width: 250px;
-  height: 250px;
-  padding: 0.5rem;
-  border-radius: 5rem;
-}
-.recentContainer {
-  margin-top: 2%;
-  display: flex;
-  flex-wrap: wrap;
-  overflow-x: auto;
-  width: cover;
-}
-.nftContainer {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 375px;
-  background: rgb(44,121,119);
-  border-radius: 0rem 0rem 2rem 2rem;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  color: white;
-  
-}
-
-.nftMain {
-  width: 375px;
-  height: 500px;
+.BuyContainer .card .face.face1 .content{
+opacity: .2;
+transition:  0.5s;
+text-align: center;
 
 }
-.price {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: start;
-  margin-bottom: 20px;
-  width: 100%;
-  height: 80px;
-  background: rgb(44,121,119);
-  border-radius: 0rem 0rem 2rem 2rem;
-  text-align: center;
-  font-size: 25px;
-  padding-bottom: 1rem;;
-  color: white
-}
-.buyNFT {
-  background: rgb(132,206,235);
-  padding: 0.5rem;
-  width: 100px;
-  margin-left: 130px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-.buyNFT:hover{
-  background: rgb(136,96,207);
-  color: white;
-}
-.buyLink{
-  text-decoration: none;
-  color: white;
-}
-.detailsContainer {
-  background: rgb(58,175,168);
-  border-radius: 0rem 0rem 2rem 2rem;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+.BuyContainer .card:hover .face.face1 .content{
+opacity: 1;
+
 }
 
-.show1 {
-  display: block;
-  background-color: rgb(23,37,41);
-  border-radius: 0rem 0rem 2rem 2rem;
-  border-bottom: 2px solid black;
-  color: white;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-.similarContainer{
-  padding-top: 2rem;
-}
-.loginContainer {
-  margin-top: 50px;
-  width: 375px;
-  height: 600px;
-  display: flex;
-  justify-content: center;
-  justify-content: space-evenly;
-  flex-direction: column;
-  
-  background: white
-}
-.formDiv{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+.BuyContainer .card .face.face1 .content i{
+font-size: 3em;
+color: white;
+display: inline-block;
+ 
 }
 
-.input {
-  width: 200px;
-  margin-bottom: 5px;
-}
-.loginBtn {
-  width: 100px
-}
-.trophyDiv{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 375px;
-  background: white;
-  border-radius: 1rem 1rem 2rem 2rem;
-  
+.BuyContainer .card .face.face1 .content h3{
+font-size: 1em;
+color: white;
+text-align: center;
+
+
 }
 
-.trophyImage {
-  width: 375px;
-  height: 500px;
-  border-radius: 1rem 1rem 0rem 0rem;
+.BuyContainer .card .face.face1 .content a{
+ transition: .5s;
 }
-.sellBtn {
-  background: green;
-  padding: 0.5rem;
-  width: 100px;
-  margin-left: 115px;
-}
-.sellCont {
-  padding: 1rem;
-}
-}
-@media (min-width: 501px) and (max-width: 800px) {
-  .container{
-    display: none;
-  }
-  .featDiv {
-    display: flex;
-    flex-direction: column;
-    justify-content: cover;
-  }
-  #introtxt {
-    height: 200px;
-    width: 570px;
-    justify-content: space-evenly;
-    display: flex;
-    flex-wrap:wrap;
-    text-align: left;
-    max-width: 100%;
-    margin-left: 60px;
-    margin-top: 50px;
-    }
 
-  .featContainer{
-    width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap:wrap;
-    margin-left: 20%;
-    padding-bottom: 5%;
-    
-  }
-  
-  .featContainer .card{
-    position: relative;
-  }
-  
-  .featContainer .card .face{
-    width:400px;
-    height: 300px;
-    transition:.4s;
-    
-  }
-  
-  .featContainer .card .face.face1{
-    position: relative;
-    background: #333;
-    display: flex;
-    justify-content: center;
-    align-content:center;
-    align-items: center;
-    z-index: 1;
-    transform: translateY(100px);
-  }
-  
-  .featContainer .card:hover .face.face1{
-    transform: translateY(0);
-    box-shadow:
-      inset 0 0 60px whitesmoke,
-      inset 20px 0 80px #f0f,
-      inset -20px 0 80px #0ff,
-      inset 20px 0 300px #f0f,
-      inset -20px 0 300px #0ff,
-      0 0 50px #fff,
-      -10px 0 80px #f0f,
-      10px 0 80px #0ff;
-     
-  }
-  
-  
-  .featContainer .card .face.face1 .content{
-    opacity: .2;
-    transition:  0.5s;
-    text-align: center;
-  
-  }
-  
-  .featContainer .card:hover .face.face1 .content{
-    opacity: 1;
-   
-  }
-  
-  .featContainer .card .face.face1 .content i{
-    font-size: 3em;
-    color: white;
-    display: inline-block;
-     
-  }
-  
-  .featContainer .card .face.face1 .content h3{
-    font-size: 1em;
-    color: white;
-    text-align: center;
-    
-  
-  }
-  
-  .featContainer .card .face.face1 .content a{
-     transition: .5s;
-  }
-  
-  .featContainer .card .face.face2{
-     position: relative;
-     background: whitesmoke;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     padding: 20px;
-    box-sizing: border-box;
-    box-shadow: 0 20px 50px rgba(0,0,0,.8);
-    transform: translateY(-100px);
-  }
-  
-  .featContainer .card:hover .face.face2{
-      transform: translateY(0);
-  }
-  
-  .featContainer .card .face.face2 .content p, a{
-    font-size: 10pt;
-    margin: 0 ;
-    padding: 0;
-    color:#333;
-  }
-  
-  .featContainer .card .face.face2 .content a{
-    text-decoration:none;
-    color: black;
-    box-sizing: border-box;
-    outline : 1px dashed #333;
-    padding: 10px;
-    margin: 15px 0 0;
-    display: inline-block;
-  }
-  
-  .featContainer .card .face.face2 .content a:hover{
-    background: #333 ;
-    color: whitesmoke; 
-    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
-  }
-  #NFTfeat {
-   width: 95%;
-   height: 95%
-  }
+.BuyContainer .card .face.face2{
+ position: relative;
+ background: whitesmoke;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ padding: 20px;
+box-sizing: border-box;
+box-shadow: 0 20px 50px rgba(0,0,0,.8);
+transform: translateY(-100px);
+}
+
+.BuyContainer .card:hover .face.face2{
+  transform: translateY(0);
+}
+
+.BuyContainer .card .face.face2 .content p, a{
+font-size: 10pt;
+margin: 0 ;
+padding: 0;
+color:#333;
+
+}
+
+.BuyContainer .card .face.face2 .content a{
+text-decoration:none;
+color: black;
+box-sizing: border-box;
+outline : 1px dashed #333;
+padding: 10px;
+margin: 15px 0 0;
+display: inline-block;
+}
+
+.BuyContainer .card .face.face2 .content a:hover{
+background: #333 ;
+color: whitesmoke; 
+box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+}
+/* ...............................buyNFT END..................................... */
   .link {
     text-decoration: none;
     color:white;
   }
+  .link:hover {
+    color:rgb(181, 4, 216)
+  }
   .Header {
     display: flex;
     flex-direction: row;
+    justify-content: start;
     position: fixed;
     width: 100%;
     height: 50px;
-    background: rgb(23,37,41);
+    background: rgb(181, 4, 216);
     color: white;
     z-index: 2;
   }
   .upArrow {
-    display: none;
+    margin-top: 18px;
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
   }
   .downArrow {
-    display: none;
-  }
-  .maxHeader {
-    display: none;
+    margin-top: 12px;
+    height: 25px;
+    width: 17px;
+    cursor: pointer;
   }
   .iconDiv {
     display: flex;
@@ -639,53 +302,26 @@
     justify-content: space-between;
     margin-right: 50px;
     margin-top: 5px;
-    margin-left: 50px;
+    margin-left: 40px;
     
   }
-  .hideText {
+  #loginIcon {
     display: none;
-  }
-  .headerIcons{
-    display: flex;
-    flex-direction: row;
-    width: 37px;
-    height: 38px;
-    margin-left: 50px;
-  }
-  /* #loginIcon {
-    display: flex;
-    flex-direction: row;
-    width: 37px;
-    height: 38px;
-    margin-left: 50px;
+
   }
   #searchIcon {
-    width: 40px;
-    height: 30px;
     display: none;
   }
   #trophyIcon {
-    display: flex;
-    flex-direction: row;
-    width: 37px;
-    height: 38px;
-    margin-left: 50px;
+    display: none;
   }
   #createIcon {
-    display: flex;
-    flex-direction: row;
-    width: 37px;
-    height: 38px;
-    margin-left: 50px;
+    display: none;
   }
   #aboutIcon {
-    display: flex;
-    flex-direction: row;
-    width: 40px;
-    height: 40px;
-    margin-left: 50px;
+    display: none;
    
-  } */
+  }
   .searchIcon{
     
     height: 30px;
@@ -693,24 +329,46 @@
     background: white;
     border: none;
     border-radius: 0rem 1rem 1rem 0rem;
+    cursor: pointer;
+    
+
   }
   .search {
     display: flex;
     flex-direction: row;
-    width: 20rem;
     margin-top: 7px;
-    margin-left: 100px;
+    width: 30vw;
+    margin-left: 15vw;
+    border-radius: 1rem 1rem 1rem 1rem;
+    border-bottom: 1px solid #0ff;
+    
+  }
+  .search:hover{
+    box-shadow: 0px 1.5px 1.5px 1.5px #0ff;
   }
   .searchBar {
     height: 28px;
+    width: 100%;
     border: none;
+    text-align: center;
+    font-size: 15px;
     border-radius: 1rem 0rem 0rem 1rem;
+    
+  }
+  .searchBar:focus{
+    box-shadow: 0px 1.5px 1.5px 1.5px #0ff;
+    outline: none;
+
+  }
+  .searchBar:focus::placeholder{
+    color: transparent;
   }
   
   .Logo {
     height: 40px;
     width: 40px;
     padding:5px;
+    cursor: pointer;
   }
   .Main {
     display: flex;
@@ -720,29 +378,41 @@
     margin-top: 50px;
   }
   
-  .dropDownIcon {
-    margin-top: 5px;
-    height: 50px;
-    width: 50px;
-  }
-  
   .dropDownContent {
     display: none;
   }
-  
   .show {
-    display: flex;
-    flex-direction: column;
-    position:fixed;
-    background-color: rgb(23,37,41);
-    color: white;
+    display: block;
+    position:absolute;
+    margin-top: 10px;
+    margin-left: -3.2rem;
+    background-color: rgba(191, 240, 240, 0.623);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 2;
+    
   }
-  .show:hover {
-    background-color: rgb(222,241,241);
-    z-index: 2;
+  .dropIcons {
+    display: flex;
+    flex-direction: row;
+    width: 27px;
+    height: 28px;
+    margin-right: 8px;
   }
+  .hideText {
+    justify-content: end;
+    display: flex;
+    flex-direction: column;
+   
+  }
+  .dropBTN {
+    display: flex;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 0.5rem;
+  }
+  .dropBTN:hover {
+    background: rgb(76, 241, 172);
+  }
+ 
   .footerContainer{
     padding-top: 5rem;
     display: none;
@@ -766,7 +436,11 @@
     display: flex;
     flex-wrap: wrap;
     overflow-x: auto;
-    width: cover
+    width: cover;
+    max-width: 2000px;
+  }
+  .container {
+    display: none;
   }
   
   .image {
@@ -780,7 +454,7 @@
   .div{
     position: relative;
     text-align: center;
-    color: white;
+    color: rgb(3, 250, 217);
   }
   .centered {
     position: absolute;
@@ -791,7 +465,7 @@
   .collection {
     position: relative;
     text-align: center;
-    color: white;
+    color: rgb(6, 248, 208);
     
   }
   .collectionImage {
@@ -804,8 +478,8 @@
     border-bottom: none;
     border-left: none;
     border-right: none;
-    color: white;
-    max-width: 1500px;
+    width: 120%;
+    color: rgb(181, 0, 253)
   }
   .featuredImage {
     width: 250px;
@@ -819,6 +493,7 @@
     flex-wrap: wrap;
     overflow-x: auto;
     width: cover;
+    max-width: 2000px;
   }
   .nftContainer {
     position: relative;
@@ -893,8 +568,17 @@
     justify-content: center;
     justify-content: space-evenly;
     flex-direction: column;
-    
-    background: white
+    margin-left: 70%;
+    background: white;
+    box-shadow:
+    inset 0 0 60px whitesmoke,
+    inset 20px 0 80px #f0f,
+    inset -20px 0 80px #0ff,
+    inset 20px 0 300px #f0f,
+    inset -20px 0 300px #0ff,
+    0 0 50px #fff,
+    -10px 0 80px #f0f,
+    10px 0 80px #0ff;
   }
   .formDiv{
     display: flex;
@@ -904,10 +588,654 @@
   
   .input {
     width: 200px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    padding: 0.5rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border: none;
+  }
+  .input:focus::placeholder {
+    color: transparent;
   }
   .loginBtn {
-    width: 100px
+    width: 100px;
+    margin-left: 35%;
+    background: #f0f;
+    padding: 0.5rem;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+
+  .loginBtn:hover {
+    background: #0ff;
+  }
+  .trophyDiv{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 375px;
+    background: white;
+    border-radius: 1rem 1rem 2rem 2rem;
+    
+  }
+  
+  .trophyImage {
+    width: 375px;
+    height: 500px;
+    border-radius: 1rem 1rem 0rem 0rem;
+  }
+  .sellBtn {
+    background: green;
+    padding: 0.5rem;
+    width: 100px;
+    margin-left: 115px;
+  }
+  .sellCont {
+    padding: 1rem;
+  }
+  }
+@media (min-width: 501px) and (max-width: 800px) {
+  .featDiv {
+    display: flex;
+    flex-direction: column;
+    width: 110%;
+    margin-left: 15vw;
+    
+  }
+#introtxt {
+  
+  margin-top: 15%;
+  margin-right:15%;
+  margin-left: 0%;
+}
+
+  .featContainer{
+    position: relative;
+    margin-top: 0%;
+  margin-right:10%;
+  margin-left: 15%;
+    padding-bottom: 8%;
+  }
+  
+  .featContainer .card{
+    position: relative;
+  }
+  
+  .featContainer .card .face{
+    width:70%;
+    height: 50%;
+    transition:.4s;
+    margin-right: 19vh;
+    
+  }
+  
+  .featContainer .card .face.face1{
+    position: relative;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-content:center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+  }
+  
+  .featContainer .card:hover .face.face1{
+    transform: translateY(0);
+    box-shadow:
+      inset 0 0 60px whitesmoke,
+      inset 20px 0 80px #f0f,
+      inset -20px 0 80px #0ff,
+      inset 20px 0 300px #f0f,
+      inset -20px 0 300px #0ff,
+      0 0 50px #fff,
+      -10px 0 80px #f0f,
+      10px 0 80px #0ff;
+     
+  }
+  
+  
+  .featContainer .card .face.face1 .content{
+    opacity: .2;
+    transition:  0.5s;
+    text-align: center;
+  
+  }
+  
+  .featContainer .card:hover .face.face1 .content{
+    opacity: 1;
+   
+  }
+  
+  .featContainer .card .face.face1 .content i{
+    font-size: 3em;
+    color: white;
+    display: inline-block;
+     
+  }
+  
+  .featContainer .card .face.face1 .content h3{
+    font-size: 1em;
+    color: white;
+    text-align: center;
+    
+  
+  }
+  
+  .featContainer .card .face.face1 .content a{
+     transition: .5s;
+  }
+  
+  .featContainer .card .face.face2{
+     position: relative;
+     background: whitesmoke;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0,0,0,.8);
+    transform: translateY(-100px);
+  }
+  
+  .featContainer .card:hover .face.face2{
+      transform: translateY(0);
+  }
+  
+  .featContainer .card .face.face2 .content p, a{
+    font-size: 10pt;
+    margin: 0 ;
+    padding: 0;
+    color:#333;
+    
+  }
+  
+  .featContainer .card .face.face2 .content a{
+    text-decoration:none;
+    color: black;
+    box-sizing: border-box;
+    outline : 1px dashed #333;
+    padding: 10px;
+    margin: 15px 0 0;
+    display: inline-block;
+  }
+  
+  .featContainer .card .face.face2 .content a:hover{
+    background: #333 ;
+    color: whitesmoke; 
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+  }
+  #NFTfeat {
+   width: 95%;
+   height: 95%
+  }
+/* buyNFT */
+#Buydiv{
+padding-left: 5%;
+}
+.BuyContainer{
+width: 1000px;
+position: relative;
+display: flex;
+justify-content: space-between;
+flex-wrap:wrap;
+margin-left: 90%;
+padding-bottom: 8%;
+}
+
+.BuyContainer .card{
+position: relative;
+}
+
+.BuyContainer .card .face{
+width:600px;
+height: 400px;
+transition:.4s;
+
+}
+
+.BuyContainer .card .face.face1{
+position: relative;
+background: #333;
+display: flex;
+justify-content: center;
+align-content:center;
+align-items: center;
+z-index: 1;
+transform: translateY(100px);
+}
+
+.BuyContainer .card:hover .face.face1{
+transform: translateY(0);
+box-shadow:
+  inset 0 0 60px whitesmoke,
+  inset 20px 0 80px #f0f,
+  inset -20px 0 80px #0ff,
+  inset 20px 0 300px #f0f,
+  inset -20px 0 300px #0ff,
+  0 0 50px #fff,
+  -10px 0 80px #f0f,
+  10px 0 80px #0ff;
+ 
+}
+
+
+.BuyContainer .card .face.face1 .content{
+opacity: .2;
+transition:  0.5s;
+text-align: center;
+
+}
+
+.BuyContainer .card:hover .face.face1 .content{
+opacity: 1;
+
+}
+
+.BuyContainer .card .face.face1 .content i{
+font-size: 3em;
+color: white;
+display: inline-block;
+ 
+}
+
+.BuyContainer .card .face.face1 .content h3{
+font-size: 1em;
+color: white;
+text-align: center;
+
+
+}
+
+.BuyContainer .card .face.face1 .content a{
+ transition: .5s;
+}
+
+.BuyContainer .card .face.face2{
+ position: relative;
+ background: whitesmoke;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ padding: 20px;
+box-sizing: border-box;
+box-shadow: 0 20px 50px rgba(0,0,0,.8);
+transform: translateY(-100px);
+}
+
+.BuyContainer .card:hover .face.face2{
+  transform: translateY(0);
+}
+
+.BuyContainer .card .face.face2 .content p, a{
+font-size: 10pt;
+margin: 0 ;
+padding: 0;
+color:#333;
+
+}
+
+.BuyContainer .card .face.face2 .content a{
+text-decoration:none;
+color: black;
+box-sizing: border-box;
+outline : 1px dashed #333;
+padding: 10px;
+margin: 15px 0 0;
+display: inline-block;
+}
+
+.BuyContainer .card .face.face2 .content a:hover{
+background: #333 ;
+color: whitesmoke; 
+box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+}
+/* ...............................buyNFT END..................................... */
+  .link {
+    text-decoration: none;
+    color:white;
+  }
+  .link:hover {
+    color:rgb(181, 4, 216)
+  }
+  .Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background: rgb(181, 4, 216);
+    color: white;
+    z-index: 2;
+  }
+  .upArrow {
+    margin-top: 18px;
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+  }
+  .downArrow {
+    margin-top: 12px;
+    height: 25px;
+    width: 17px;
+    cursor: pointer;
+  }
+  .iconDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 50px;
+    margin-top: 5px;
+    margin-left: 50px;
+    
+  }
+  #loginIcon {
+    display: none;
+
+  }
+  #searchIcon {
+    display: none;
+  }
+  #trophyIcon {
+    display: none;
+  }
+  #createIcon {
+    display: none;
+  }
+  #aboutIcon {
+    display: none;
+   
+  }
+  .searchIcon{
+    
+    height: 30px;
+    width: 30px;
+    background: white;
+    border: none;
+    border-radius: 0rem 1rem 1rem 0rem;
+    cursor: pointer;
+    
+
+  }
+  .search {
+    display: flex;
+    flex-direction: row;
+    margin-top: 7px;
+    width: 40vw;
+    margin-left: 10vw;
+    border-radius: 1rem 1rem 1rem 1rem;
+    border-bottom: 1px solid #0ff;
+    
+  }
+  .search:hover{
+    
+    box-shadow: 0px 1.5px 1.5px 1.5px #0ff;
+  }
+  .searchBar {
+    height: 28px;
+    width: 120vw;
+    border: none;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 1rem 0rem 0rem 1rem;
+    
+    
+  }
+  .searchBar:focus{
+    box-shadow: 0px 1.5px 1.5px 1.5px #0ff;
+    outline: none;
+    
+  }
+  .searchBar:focus::placeholder{
+    color: transparent;
+  }
+  
+  .Logo {
+    height: 40px;
+    width: 40px;
+    padding:5px;
+    cursor: pointer;
+  }
+  .Main {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .dropDownContent {
+    display: none;
+  }
+  .show {
+    display: block;
+    position:absolute;
+    margin-top: 10px;
+    margin-left: -3.2rem;
+    background-color: rgba(191, 240, 240, 0.623);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+    
+  }
+  .dropIcons {
+    display: flex;
+    flex-direction: row;
+    width: 27px;
+    height: 28px;
+    margin-right: 8px;
+  }
+  .hideText {
+    justify-content: end;
+    display: flex;
+    flex-direction: column;
+   
+  }
+  .dropBTN {
+    display: flex;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 0.5rem;
+  }
+  .dropBTN:hover {
+    background: rgb(76, 241, 172);
+  }
+ 
+  .footerContainer{
+    padding-top: 5rem;
+    display: none;
+  }
+  .Footer{
+    display: flex;
+    position: fixed;
+    padding-top: 2%;
+    bottom: 0;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 50px;
+    background:rgb(23,37,41);
+    color: white;
+  
+  }
+ 
+  .imageContainer {
+    /* padding: 1rem; */
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    width: cover;
+    max-width: 2000px;
+  }
+  .container {
+    display: none;
+  }
+  
+  .image {
+    display:flex ;
+    width: 200px;
+    height: 120px;
+    border-radius: 500rem;
+    padding: 5vh 5vw;
+    
+  }
+  .div{
+    position: relative;
+    text-align: center;
+    color: rgb(3, 250, 217);
+  }
+  .centered {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .collection {
+    position: relative;
+    text-align: center;
+    color: rgb(6, 248, 208);
+    
+  }
+  .collectionImage {
+    width: 360px;
+    height: 250px;
+    padding: 0.5rem;
+    border-radius: 5rem;
+  }
+  .collectionField {
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    width: 120%;
+    color: rgb(181, 0, 253)
+  }
+  .featuredImage {
+    width: 250px;
+    height: 250px;
+    padding: 0.5rem;
+    border-radius: 5rem;
+  }
+  .recentContainer {
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    width: cover;
+    max-width: 2000px;
+  }
+  .nftContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 375px;
+    background: rgb(44,121,119);
+    border-radius: 0rem 0rem 2rem 2rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    color: white;
+    
+  }
+  .nftMain {
+    width: 375px;
+    height: 500px;
+  
+  }
+  .price {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: start;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 80px;
+    background: rgb(44,121,119);
+    border-radius: 0rem 0rem 2rem 2rem;
+    text-align: center;
+    font-size: 25px;
+    padding-bottom: 1rem;;
+    color: white
+  }
+  .buyNFT {
+    background: rgb(132,206,235);
+    padding: 0.5rem;
+    width: 100px;
+    margin-left: 130px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  .buyNFT:hover{
+    background: rgb(136,96,207);
+    color: white;
+  }
+  .buyLink{
+    text-decoration: none;
+    color: white;
+  }
+  .detailsContainer {
+    background: rgb(58,175,168);
+    border-radius: 0rem 0rem 2rem 2rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    
+  }
+  .show1 {
+    display: block;
+    background-color: rgb(23,37,41);
+    border-radius: 0rem 0rem 2rem 2rem;
+    border-bottom: 2px solid black;
+    color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .similarContainer{
+    padding-top: 2rem;
+  }
+  .loginContainer {
+    margin-top: 50px;
+    width: 375px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin-left: 70%;
+    background: white;
+    box-shadow:
+    inset 0 0 60px whitesmoke,
+    inset 20px 0 80px #f0f,
+    inset -20px 0 80px #0ff,
+    inset 20px 0 300px #f0f,
+    inset -20px 0 300px #0ff,
+    0 0 50px #fff,
+    -10px 0 80px #f0f,
+    10px 0 80px #0ff;
+  }
+  .formDiv{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .input {
+    width: 200px;
+    margin-bottom: 10px;
+    padding: 0.5rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border: none;
+  }
+  .input:focus::placeholder {
+    color: transparent;
+  }
+  .loginBtn {
+    width: 100px;
+    margin-left: 35%;
+    background: #f0f;
+    padding: 0.5rem;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+
+  .loginBtn:hover {
+    background: #0ff;
   }
   .trophyDiv{
     position: relative;
@@ -939,16 +1267,19 @@
     .featDiv {
       display: flex;
       flex-direction: row;
-      width: 100%;
-      border: 2px solid black;
-     
+      width: 110%;
       
     }
   #introtxt {
     margin-top: 30vh;
-    margin-right: 20vh;
+    margin-right: 10%;
+    margin-left: 20vh;
   }
-
+  #introH2 {
+    font-weight: 800;
+    color: rgb(129, 123, 123);
+    font-family: 'Lato', sans-serif;
+  }
     .featContainer{
       position: relative;
       padding-bottom: 8%;
@@ -959,10 +1290,10 @@
     }
     
     .featContainer .card .face{
-      width:600px;
-      height: 400px;
+      width:70%;
+      height: 50%;
       transition:.4s;
-      margin-right: 10vh;
+      margin-right: 19vh;
       
     }
     
@@ -1259,26 +1590,27 @@
       display: flex;
       flex-direction: row;
       margin-top: 7px;
-      width: 500px;
+      width: 30vw;
       margin-left: 70%;
       border-radius: 1rem 1rem 1rem 1rem;
       border-bottom: 1px solid #0ff;
       
     }
     .search:hover{
-      box-shadow: 0px 4px 8px 4px #0ff;
+      box-shadow: 0px 1.5px 1.5px 1.5px #0ff;
     }
     .searchBar {
       height: 28px;
-      width: 500px;
+      width: 40vw;
       border: none;
+      max-width: 40vw;
       text-align: center;
       font-size: 15px;
       border-radius: 1rem 0rem 0rem 1rem;
       
     }
     .searchBar:focus{
-      box-shadow: 0px 4px 8px 4px #0ff;
+      box-shadow: 0px 1.5px 1.5px 1.5px #0ff;
       outline: none;
 
     }
@@ -1308,9 +1640,10 @@
       position:absolute;
       margin-top: 10px;
       margin-left: -3.2rem;
-      background-color: #0ff;
+      background-color: rgba(0, 255, 255, 0.623);
       box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
       z-index: 2;
+      
     }
     .dropIcons {
       display: flex;
@@ -1331,7 +1664,7 @@
       padding: 0.5rem;
     }
     .dropBTN:hover {
-      background: rgb(58,175,169);
+      background: rgb(76, 241, 172);
     }
    
     .footerContainer{
@@ -1375,7 +1708,7 @@
     .div{
       position: relative;
       text-align: center;
-      color: white;
+      color: rgb(3, 250, 217);
     }
     .centered {
       position: absolute;
@@ -1386,7 +1719,7 @@
     .collection {
       position: relative;
       text-align: center;
-      color: white;
+      color: rgb(6, 248, 208);
       
     }
     .collectionImage {
@@ -1399,8 +1732,8 @@
       border-bottom: none;
       border-left: none;
       border-right: none;
-      max-width: 1500px;
-      color: white
+      max-width: 100vw;
+      color: rgb(181, 0, 253)
     }
     .featuredImage {
       width: 250px;
@@ -1563,8 +1896,140 @@
   .App {
     display: flex;
   }
-  .hideFeat {
-    display: none;
+  .featDiv {
+    display: flex;
+    flex-direction: column;
+    width: 110%;
+    margin-top: 0%;
+  }
+#introtxt {
+  margin-top: 1vh;
+  margin-right: 10%;
+  margin-left: 1vh;
+  
+}
+#introH2 {
+  font-weight: 800;
+  color: rgb(129, 123, 123);
+  font-family: 'Lato', sans-serif;
+}
+
+  .featContainer{
+    position: auto;
+    padding-bottom: 1%;
+  }
+  
+  .featContainer .card{
+    position: relative;
+  }
+  
+  .featContainer .card .face{
+    width:70%;
+    height: 50%;
+    transition:.4s;
+    margin-left: 5vh;
+    
+  }
+  
+  .featContainer .card .face.face1{
+    position: relative;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-content:center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+  }
+  
+  .featContainer .card:hover .face.face1{
+    transform: translateY(0);
+    box-shadow:
+      inset 0 0 60px whitesmoke,
+      inset 20px 0 80px #f0f,
+      inset -20px 0 80px #0ff,
+      inset 20px 0 300px #f0f,
+      inset -20px 0 300px #0ff,
+      0 0 50px #fff,
+      -10px 0 80px #f0f,
+      10px 0 80px #0ff;
+     
+  }
+  
+  
+  .featContainer .card .face.face1 .content{
+    opacity: .2;
+    transition:  0.5s;
+    text-align: center;
+  
+  }
+  
+  .featContainer .card:hover .face.face1 .content{
+    opacity: 1;
+   
+  }
+  
+  .featContainer .card .face.face1 .content i{
+    font-size: 3em;
+    color: white;
+    display: inline-block;
+     
+  }
+  
+  .featContainer .card .face.face1 .content h3{
+    font-size: 1em;
+    color: white;
+    text-align: center;
+    
+  
+  }
+  
+  .featContainer .card .face.face1 .content a{
+     transition: .5s;
+  }
+  
+  .featContainer .card .face.face2{
+     position: relative;
+     background: whitesmoke;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0,0,0,.8);
+    transform: translateY(-100px);
+  }
+  
+  .featContainer .card:hover .face.face2{
+      transform: translateY(0);
+  }
+  
+  .featContainer .card .face.face2 .content p, a{
+    font-size: 10pt;
+    margin: 0 ;
+    padding: 0;
+    color:#333;
+    
+  }
+  
+  .featContainer .card .face.face2 .content a{
+    text-decoration:none;
+    color: black;
+    box-sizing: border-box;
+    outline : 1px dashed #333;
+    padding: 10px;
+    margin: 15px 0 0;
+    display: inline-block;
+  }
+  
+  .featContainer .card .face.face2 .content a:hover{
+    background: #333 ;
+    color: whitesmoke; 
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+  }
+  #NFTfeat {
+   width: 95%;
+   height: 95%
   }
   .link {
     text-decoration: none;
@@ -1578,7 +2043,7 @@
     width: 100%;
     border: 2px solid black;
     height: 50px;
-    background: rgb(23,37,41);
+    background: rgba(190, 1, 248, 0.87);
     color: white;
     z-index: 2;
   }
@@ -1642,7 +2107,7 @@
     display: flex;
     flex-direction: row;
     margin-top: 5px;
-    width: 45vw;
+    width: 76vw;
     height: 40px;
     margin-right: 20px;
   }
@@ -1653,6 +2118,7 @@
     border-radius: 1rem 0rem 0rem 1rem;
   }
   .Logo {
+    margin-top: 10%;
     height: 40px;
     width: 40px;
   }
@@ -1747,7 +2213,7 @@
     border-bottom: none;
     border-left: none;
     border-right: none;
-    color: white
+    color: rgb(191, 4, 248)
   }
   .featuredImage {
     width: 250px;
