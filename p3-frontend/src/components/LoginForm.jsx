@@ -55,6 +55,7 @@ const {loginState,
     console.log(userFormState)
     return (
         <div className = "formDiv">
+
             <form className = "loginForm"
                   onSubmit = { handleSubmit}>
                 <input className = "input" 
@@ -73,8 +74,10 @@ const {loginState,
                     Login
                 </button>
             </form>
+           
             <p>New User? Click Below:</p>
-            <div>
+           
+            <div id="newUser">
                 <Link className = "link" to = "/newuser">New User</Link>
             </div>
         </div>
