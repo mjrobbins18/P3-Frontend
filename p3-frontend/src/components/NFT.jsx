@@ -41,16 +41,15 @@ function NFT({ match }) {
              </div>
              <div class="face face2">
                <div class="content">
-              
-             <Details thisNFT = { thisNFT }/>
+              <p> {thisNFT[0].description}</p>
+             {/* <Details thisNFT = { thisNFT }/> */}
             
                  <br></br>
                  
                      <Link className = "buyLink" to = { loggedIn.buyOrLogin } onClick = { checkLogin }>Buy Now</Link>
                
                  <br></br>
-                 <br></br>
-                 <br></br>
+                 
                  <br></br>
                  <h1>{ thisNFT[0].name}</h1>
                </div>
