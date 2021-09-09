@@ -10,7 +10,7 @@ function Details({ thisNFT }) {
     if (dropDown === false){
         return (
             <div className = "Dropdown">
-                <h1 onClick = { showDropDown }>Details</h1>
+                <p onClick = { showDropDown }>Details</p>
                 <div className = "dropDownContent">
                     <h1>details</h1>
                    
@@ -22,7 +22,7 @@ function Details({ thisNFT }) {
         if(thisNFT[0].description ===  null){
             return (
                 <div className = "Dropdown">
-                    <h1 onClick = { showDropDown }>Details</h1>
+                    <p onClick = { showDropDown }>Details</p>
                 <div className = "show1">
                     <h1>No details about this NFT available at this time!</h1>
        

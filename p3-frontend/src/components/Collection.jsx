@@ -8,6 +8,8 @@ function Collection(props) {
     
 
     return (
+
+        
         <div className = "collectionContainer">
             <fieldset className = "collectionField"><legend className = "collectionLegend">Collections</legend></fieldset>
             <div className = "imageContainer">
