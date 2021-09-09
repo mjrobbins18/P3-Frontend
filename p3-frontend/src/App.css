@@ -2041,9 +2041,8 @@ box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
     justify-content: space-between;
     position: fixed;
     width: 100%;
-    border: 2px solid black;
     height: 50px;
-    background: rgba(190, 1, 248, 0.87);
+    background: rgb(248, 1, 207);
     color: white;
     z-index: 2;
   }
@@ -2157,6 +2156,7 @@ box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
   .footerContainer{
     padding-top: 5rem;
     position: fixed;
+    bottom:0;
   }
   .Footer{
     display: flex;
@@ -2165,9 +2165,8 @@ box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
     bottom: 0;
     justify-content: space-evenly;
     width: 100%;
-    border: 2px solid black;
     height: 50px;
-    background:rgb(23,37,41);
+    background:rgb(248, 1, 207);
     color: white;
   
   }
