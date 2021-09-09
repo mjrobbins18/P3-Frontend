@@ -1,16 +1,9 @@
 import React, { useContext, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { DataContext } from './DataContext';
 import axios from 'axios'
-import NFT from './NFT';
 
 function CreateNFT(props) {
-    const test = {
-        name: "ksdfslk",
-        url: "dfsfsd",
-        description: "dskjfksdd"
-    }
-    
+
     const { loggedIn, 
             setLoggedIn,
             createNftState,
@@ -31,7 +24,7 @@ function CreateNFT(props) {
         setCreateNftState(initialNftState)
         console.log(nftFormState)
 
-        axios.post("http://localhost:8001/nftmarketplace/new", createNftState)
+        axios.post("https://nft-api-p3.herokuapp.com/nftmarketplace/new", createNftState)
         .then(res => console.log(res.data))
         .catch(console.error)
         setNftFormState(createNftState)

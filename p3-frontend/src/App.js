@@ -24,8 +24,8 @@ const initialUserState = {
   password: ""
 }
 
-const [searchState, setSearchState] = ("")
-const [formState, setFormState] = ("")
+const [searchState, setSearchState] = useState("")
+const [formState, setFormState] = useState("")
 const [random, setRandom] = useState([])
 const [collection, setCollection] = useState([])
 const [formStateMinMax, setFormStateMinMax] = useState(initialStateMinMax)
@@ -36,7 +36,7 @@ const [nftFormState, setNftFormState] = useState(initialNftState)
 const [userState, setUserState] = useState(initialUserState)
 const [userFormState, setUserFormState] = useState(initialUserState)
 
-const url = "http://localhost:8001/nftmarketplace/"
+const url = "https://nft-api-p3.herokuapp.com/nftmarketplace"
 // const collectUrl = "http://localhost:8001/nftmarketplace/collection"
 console.log(random)
     useEffect(() => {
