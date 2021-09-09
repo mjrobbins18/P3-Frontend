@@ -7,22 +7,29 @@ import { DataContext } from './DataContext';
 
 function NFT({ match }) {
 
-    const { loggedIn, setLoggedIn, random } = useContext(DataContext)
-    const [loginOrBuy, setLoginOrBuy] = useState("/login")
+
+
+    const { loggedIn, 
+            setLoggedIn, 
+            random,
+            loginOrBuy, 
+            setLoginOrBuy
+             } = useContext(DataContext)
+    
     const thisID = match.params.id
     const thisNFT = random.filter(item => item._id === thisID)
     
-    const checkLogin = () => {
-        
-        if(!loggedIn.isLoggedIn) {
+
+
+    const checkLogin = () => { 
+        if(loggedIn === false) {
             alert("You must login or create a username first")
         }
-    
-
         
     }
-    console.log(thisNFT)
-
+    
+console.log(loginOrBuy)
+console.log(!loggedIn)
     return (
 <div className= "BuyDiv"> 
 
@@ -46,7 +53,7 @@ function NFT({ match }) {
             
                  <br></br>
                  
-                     <Link className = "buyLink" to = { loggedIn.buyOrLogin } onClick = { checkLogin }>Buy Now</Link>
+                     <Link className = "buyLink" to = { loginOrBuy } onClick = { checkLogin }>Buy Now</Link>
                
                  <br></br>
                  <br></br>

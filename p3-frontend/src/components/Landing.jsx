@@ -16,6 +16,7 @@ import NFTContainer from './NFTContainer';
 import RandomCont from './RandomCont';
 import CollectionInfo from './CollectionInfo';
 import CreateContainer from './CreateContainer';
+import CreateUserCont from './CreateUserCont';
 
 
 
@@ -38,7 +39,7 @@ function Landing(props) {
                 <Route exact path = "/Collection/:id"  render = { routerProps => <CollectionInfo match = { routerProps.match }/>}/>
                 <Route exact path = "/buy" render = { Buy }/>
                 
-                <Route exact path = "/newuser" render = { CreateUser }/>
+                <Route exact path = "/newuser" render = { CreateUserCont }/>
                 </div>
                
             </main>

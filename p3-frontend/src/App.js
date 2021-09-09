@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import { DataContext } from './components/DataContext.jsx'
 import Landing from './components/Landing';
+import axios from 'axios';
 
 
 function App() {
@@ -10,10 +11,6 @@ function App() {
     min: "",
     max: ""
 }
-const loginState = {
-  isLoggedIn: false,
-  buyOrLogin: "/login"
-}
 const initialNftState = {
   name: "",
   image_url: "",
@@ -21,8 +18,11 @@ const initialNftState = {
 }
 const initialUserState = {
   username: "",
-  password: ""
+  password: "",
+  password2: ""
 }
+const loginRoute = "/login"
+
 
 const [searchState, setSearchState] = useState("")
 const [formState, setFormState] = useState("")
@@ -30,14 +30,21 @@ const [random, setRandom] = useState([])
 const [collection, setCollection] = useState([])
 const [formStateMinMax, setFormStateMinMax] = useState(initialStateMinMax)
 const [inputMinMax, setInputMinMax] = useState(initialStateMinMax)
-const [loggedIn, setLoggedIn] = useState(loginState)
+const [loggedIn, setLoggedIn] = useState(() => {
+  const savedLogin = localStorage.getItem('loggedin')
+  const loggedInLocally = JSON.parse(savedLogin)
+  return loggedInLocally || ""
+})
+const [currentUser, setCurrentUser] = useState()
+const [loginOrBuy, setLoginOrBuy] = useState(loginRoute)
+const [loginUser, setLoginUser] = useState(initialUserState)
 const [createNftState, setCreateNftState] = useState(initialNftState)
 const [nftFormState, setNftFormState] = useState(initialNftState)
 const [userState, setUserState] = useState(initialUserState)
 const [userFormState, setUserFormState] = useState(initialUserState)
-
 const url = "https://nft-api-p3.herokuapp.com/nftmarketplace"
 const collectUrl = "https://nft-api-p3.herokuapp.com/nftmarketplace/collections"
+
 console.log(random)
     useEffect(() => {
         fetch(url).then(res => res.json()).then(res=>setRandom(res)).catch(console.error)
@@ -72,7 +79,11 @@ console.log(random)
                                       nftFormState,
                                       setNftFormState,
                                       initialUserState,
-                                      initialNftState
+                                      initialNftState,
+                                      loginUser,
+                                      setLoginUser,
+                                      loginOrBuy,
+                                      setLoginOrBuy
                                       }}>
         <Landing/>
       </DataContext.Provider>

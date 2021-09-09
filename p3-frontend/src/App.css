@@ -1892,7 +1892,9 @@ box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
 @media all and (max-width: 375px) {
 
 
-
+.dropIcons {
+  display: none;
+}
   .App {
     display: flex;
   }
