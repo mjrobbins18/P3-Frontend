@@ -37,15 +37,15 @@ const [userState, setUserState] = useState(initialUserState)
 const [userFormState, setUserFormState] = useState(initialUserState)
 
 const url = "https://nft-api-p3.herokuapp.com/nftmarketplace"
-// const collectUrl = "http://localhost:8001/nftmarketplace/collection"
+const collectUrl = "https://nft-api-p3.herokuapp.com/nftmarketplace/collections"
 console.log(random)
     useEffect(() => {
         fetch(url).then(res => res.json()).then(res=>setRandom(res)).catch(console.error)
     },[])
-  //   useEffect(() => {
-  //     fetch(collectUrl).then(res => res.json()).then(res=>setCollection(res)).catch(console.error)
-  // },[])
-console.log(random)
+    useEffect(() => {
+      fetch(collectUrl).then(res => res.json()).then(res=>setCollection(res)).catch(console.error)
+  },[])
+
   return (
     <div className = "App" >
       <DataContext.Provider value = {{ formStateMinMax,
