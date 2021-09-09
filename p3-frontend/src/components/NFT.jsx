@@ -13,23 +13,20 @@ function NFT({ match }) {
             setLoggedIn, 
             random,
             loginOrBuy, 
-            setLoginOrBuy
+            setLoginOrBuy,
              } = useContext(DataContext)
     
     const thisID = match.params.id
     const thisNFT = random.filter(item => item._id === thisID)
-    
 
 
     const checkLogin = () => { 
-        if(loggedIn === false) {
+        if(loggedIn === "") {
             alert("You must login or create a username first")
         }
         
-    }
-    
-console.log(loginOrBuy)
-console.log(!loggedIn)
+      }
+
     return (
 <div className= "BuyDiv"> 
 

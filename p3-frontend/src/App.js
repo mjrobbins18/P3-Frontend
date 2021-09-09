@@ -14,7 +14,8 @@ function App() {
 const initialNftState = {
   name: "",
   image_url: "",
-  description: ""
+  description: "",
+  price: 0
 }
 const initialUserState = {
   username: "",
@@ -22,6 +23,7 @@ const initialUserState = {
   password2: ""
 }
 const loginRoute = "/login"
+
 
 
 const [searchState, setSearchState] = useState("")
@@ -35,15 +37,24 @@ const [loggedIn, setLoggedIn] = useState(() => {
   const loggedInLocally = JSON.parse(savedLogin)
   return loggedInLocally || ""
 })
-const [currentUser, setCurrentUser] = useState()
+const [currentUser, setCurrentUser] = useState(() => {
+  const savedUser = localStorage.getItem('username')
+  return savedUser || ""
+})
+const [userInfo, setUserInfo] = useState([])
+   
 const [loginOrBuy, setLoginOrBuy] = useState(loginRoute)
 const [loginUser, setLoginUser] = useState(initialUserState)
 const [createNftState, setCreateNftState] = useState(initialNftState)
 const [nftFormState, setNftFormState] = useState(initialNftState)
 const [userState, setUserState] = useState(initialUserState)
 const [userFormState, setUserFormState] = useState(initialUserState)
+const [recent, setRecent] = useState([])
 const url = "https://nft-api-p3.herokuapp.com/nftmarketplace"
 const collectUrl = "https://nft-api-p3.herokuapp.com/nftmarketplace/collections"
+const userUrl = `http://localhost:8001/api/users/username/${currentUser}`
+const recentUrl = `http://localhost:8001/nftmarketplace/newfind`
+
 
 console.log(random)
     useEffect(() => {
@@ -53,6 +64,17 @@ console.log(random)
       fetch(collectUrl).then(res => res.json()).then(res=>setCollection(res)).catch(console.error)
   },[])
 
+   useEffect(() =>{
+       axios.get(userUrl)
+       .then(res => setUserInfo(res.data))
+       .catch(console.error)
+   }, [])
+   useEffect(() =>{
+    axios.get(recentUrl)
+    .then(res => setRecent(res.data))
+    .catch(console.error)
+}, [])
+console.log(recent)
   return (
     <div className = "App" >
       <DataContext.Provider value = {{ formStateMinMax,
@@ -83,7 +105,11 @@ console.log(random)
                                       loginUser,
                                       setLoginUser,
                                       loginOrBuy,
-                                      setLoginOrBuy
+                                      setLoginOrBuy,
+                                      currentUser,
+                                      userInfo,
+                                      setUserInfo,
+                                      recent
                                       }}>
         <Landing/>
       </DataContext.Provider>

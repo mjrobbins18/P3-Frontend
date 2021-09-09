@@ -8,9 +8,6 @@ import jwt_decode from "jwt-decode";
 
 function LoginForm(props) {
 
-const url = "http://localhost:8001/login"
-const [loginInfo, setLoginInfo] = useState([])
-const [currentUser, setCurrentUser] = useState()
 const {loginState, 
        loggedIn, 
        setLoggedIn,
@@ -38,7 +35,9 @@ const {loginState,
           localStorage.setItem('loggedin', true)
           setLoginOrBuy("/buy")
           history.push('/')
+          window.location.reload()
         })
+        .then(res => console.log(`res ${res}`))
         .catch(err => alert("Incorrect Username or Password"))
         setUserFormState(initialUserState)
         
@@ -52,7 +51,6 @@ const {loginState,
         })
 
     }
-    
     console.log(loginUser)
     console.log(userFormState)
     return (
