@@ -14,7 +14,7 @@ function Main(props) {
             <div>
         
                 <Collection/>
-                <Featured/>
+                {/* <Featured/> */}
                 <RecentlyAdded/>
             </div>
         </div>
