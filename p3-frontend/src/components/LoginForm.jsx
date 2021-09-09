@@ -7,11 +7,16 @@ function LoginForm(props) {
         <div className = "formDiv">
             <form className = "loginForm">
                 <input className = "input" type = "text" placeholder = "Username" />
+                <br />
                 <input className = "input" type = "password" placeholder = "Password"/><br></br>
+                <br />
+                
                 <div className = "loginBtn">Log in</div>
             </form>
+           
             <p>New User? Click Below:</p>
-            <div>
+           
+            <div id="newUser">
                 <Link className = "link" to = "/newuser">New User</Link>
             </div>
         </div>
