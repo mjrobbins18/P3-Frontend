@@ -1,14 +1,77 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useEffect, useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
+import { DataContext } from './DataContext';
+import axios from 'axios'
+import setAuthToken from './setAuthToken';
+import jwt_decode from "jwt-decode";
 
 
 function LoginForm(props) {
+
+const {loginState, 
+       loggedIn, 
+       setLoggedIn,
+       loginUser,
+       setLoginUser,
+       initialUserState,
+       userFormState, 
+       setUserFormState,
+       setToken,
+       loginOrBuy,
+       setLoginOrBuy
+                        } = useContext(DataContext)
+
+    const history = useHistory()
+
+
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        setLoginUser(userFormState)
+        axios.post("http://localhost:8001/api/users/login", userFormState)
+        .then(res => {
+          const { token } = res.data
+          localStorage.setItem("jwtToken", token)
+          localStorage.setItem("username", userFormState.username )
+          localStorage.setItem('loggedin', true)
+          setLoginOrBuy("/buy")
+          history.push('/')
+          window.location.reload()
+        })
+        .then(res => console.log(`res ${res}`))
+        .catch(err => alert("Incorrect Username or Password"))
+        setUserFormState(initialUserState)
+        
+        console.log(loggedIn)
+        
+    }
+
+    const handleChange = (event) => {
+        setUserFormState({
+            ...userFormState, [event.target.id]: event.target.value
+        })
+
+    }
+    console.log(loginUser)
+    console.log(userFormState)
     return (
         <div className = "formDiv">
-            <form className = "loginForm">
-                <input className = "input" type = "text" placeholder = "Username" />
-                <input className = "input" type = "password" placeholder = "Password"/><br></br>
-                <div className = "loginBtn">Log in</div>
+            <form className = "loginForm"
+                  onSubmit = { handleSubmit}>
+                <input className = "input" 
+                       type = "text" 
+                       placeholder = "Username"
+                       id = "username"
+                       value = { userFormState.username }
+                       onChange = {handleChange} />
+                <input className = "input" 
+                       type = "password" 
+                       placeholder = "Password"
+                       id = "password"
+                       value = { userFormState.password }
+                       onChange = { handleChange }/><br></br>
+                <button className = "loginBtn" onSubmit = { handleSubmit }>
+                    Login
+                </button>
             </form>
             <p>New User? Click Below:</p>
             <div>
@@ -18,4 +81,4 @@ function LoginForm(props) {
     );
 }
 
-export default LoginForm;<h1>Login Form</h1>
+export default LoginForm;

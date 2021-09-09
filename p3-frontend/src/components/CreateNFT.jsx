@@ -22,9 +22,8 @@ function CreateNFT(props) {
         event.preventDefault()
         
         setCreateNftState(initialNftState)
-        console.log(nftFormState)
 
-        axios.post("https://nft-api-p3.herokuapp.com/nftmarketplace/new", createNftState)
+        axios.post("http://localhost:8001/nftmarketplace/new", createNftState)
         .then(res => console.log(res.data))
         .catch(console.error)
         setNftFormState(createNftState)
@@ -58,6 +57,12 @@ function CreateNFT(props) {
                        type = "text" 
                        className = "input" 
                        placeholder = "Image URL" />
+                 <input id = "price" 
+                       value = { createNftState.price }
+                       onChange = { handleChange }
+                       type = "number" 
+                       className = "input" 
+                       placeholder = "Set Price" />      
                 <textarea id = "description" 
                           value = { createNftState.description }
                           onChange = { handleChange }
