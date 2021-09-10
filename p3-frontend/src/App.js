@@ -25,7 +25,6 @@ const initialUserState = {
 const loginRoute = "/login"
 
 
-
 const [searchState, setSearchState] = useState("")
 const [formState, setFormState] = useState("")
 const [random, setRandom] = useState([])
@@ -50,10 +49,10 @@ const [nftFormState, setNftFormState] = useState(initialNftState)
 const [userState, setUserState] = useState(initialUserState)
 const [userFormState, setUserFormState] = useState(initialUserState)
 const [recent, setRecent] = useState([])
-const url = "http://localhost:8001/nftmarketplace/findnft"
+const url = "https://nft-api-p3.herokuapp.com/nftmarketplace/findnft"
 const collectUrl = "https://nft-api-p3.herokuapp.com/nftmarketplace/collections"
-const userUrl = `http://localhost:8001/api/users/username/${currentUser}`
-const recentUrl = `http://localhost:8001/nftmarketplace/newfind`
+const userUrl = `https://nft-api-p3.herokuapp.com/api/users/username/${currentUser}`
+const recentUrl = `https://nft-api-p3.herokuapp.com/nftmarketplace/newfind`
 
 
 console.log(random)

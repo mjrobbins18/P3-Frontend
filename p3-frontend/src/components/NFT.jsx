@@ -1,6 +1,4 @@
 import React, { useContext, useState } from 'react';
-import Details from './Details';
-import SimilarArt from './SimilarArt';
 import { Link } from 'react-router-dom';
 import { DataContext } from './DataContext';
 

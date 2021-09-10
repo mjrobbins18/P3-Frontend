@@ -18,7 +18,7 @@ const history = useHistory()
     const handleSubmit = (event) => {
         setNewUser(userState)
         console.log(newUser)
-        axios.post("http://localhost:8001/api/users/register", userState)
+        axios.post("https://nft-api-p3.herokuapp.com/api/users/register", userState)
         .then(res => console.log(res.data))
         .then(history.push('/login'))
         .catch(error => alert(error))

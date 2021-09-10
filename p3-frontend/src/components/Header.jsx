@@ -9,8 +9,6 @@ import plusIcon from './Images/plusIcon.png'
 import aboutIcon from './Images/aboutIcon.svg'
 import { useContext } from 'react';
 import { DataContext } from './DataContext';
-import { useEffect } from 'react';
-import axios from 'axios'
 
 
 function Header(props) {
