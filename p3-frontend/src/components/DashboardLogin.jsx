@@ -16,7 +16,7 @@ function DashboardLogin(props) {
         return (
             <div className = "loginContainer">
                 <h1>Please Login in order to Create, Buy, and Update NFTS!</h1>
-                <div className = "loginBtn">
+                <div id= "dashLogButton"className = "loginBtn">
                 <Link className = "link" to = "/login">Login</Link>
                 </div>
             </div>

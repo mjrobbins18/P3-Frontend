@@ -26,12 +26,11 @@ function FeaturedNFT(props) {
                 Christie’s of London, Art|Basel Miami, and The PBS NewsHour.
               </p>
               <br />
-              <br />
               <Link to="/browse" type="button">
                 Explore!
               </Link>
               <br></br>
-              
+              <br />
               <h4>Featured NFT of the Day!</h4>
             </div>
           </div>
