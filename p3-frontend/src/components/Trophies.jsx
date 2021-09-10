@@ -1,87 +1,27 @@
 import React from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { DataContext } from './DataContext';
 import Details from './Details';
-import flower from './Images/flower.jpg'
-import flower1 from './Images/flower1.jpg'
-import forest from './Images/forest.jpg'
-import mountain from './Images/mountain.jpg'
 
-function Trophies(props) {
-    return (
-        <div>
-            <h1>Trophies</h1>
-            <div>
-            <div className = "trophyDiv">
-            <img  className = "trophyImage" src ={mountain} alt = ""/>
-                <div className = "detailsContainer">
-                    <div className = "sellCont">
-                    <div className = "sellBtn">
-                    <Link className = "buyLink" to = "/sell">Sell NFT</Link>
-                    </div>
-                    </div>
-                </div>
-                <div className = "detailsContainer">
-                    <Details/>
+
+function Trophies({ userInfo }) {
+    if(userInfo[0].trophies.length < 2){
+        return null
+    }else {
+        return (
+            <div className = "collectionContainer">
+                <fieldset className = "collectionField"><legend className = "collectionLegend">Currently Owned NFTS</legend></fieldset>
+                <div className = "imageContainer">
+                    
                 </div>
             </div>
-            <br></br>
-            <div className = "trophyDiv">
-            <img  className = "trophyImage" src ={mountain} alt = ""/>
-                <div className = "detailsContainer">
-                    <div className = "sellCont">
-                        <div className = "sellBtn">
-                            <Link className = "buyLink" to = "/sell">Sell NFT</Link>
-                        </div>
-                    </div>                
-                </div>
-                <div className = "detailsContainer">
-                    <Details/>
-           
-                </div>
-            </div>
-            <br></br>
-            <div className = "trophyDiv">
-            <img  className = "trophyImage" src ={mountain} alt = ""/>
-                <div className = "detailsContainer">
-                    <div className = "sellCont">
-                        <div className = "sellBtn">
-                            <Link className = "buyLink" to = "/sell">Sell NFT</Link>
-                        </div>
-                    </div>
-                </div>
-                <div className = "detailsContainer">
-                    <Details/>
-           
-                </div>
-            </div>
-            <br></br>
-            <div className = "trophyDiv">
-            <img  className = "trophyImage" src ={mountain} alt = ""/>
-                <div className = "detailsContainer">
-                    <div className = "sellCont">
-                        <div className = "sellBtn">
-                            <Link className = "buyLink" to = "/sell">Sell NFT</Link>
-                        </div>
-                    </div>
-                </div>
-                <div className = "detailsContainer">
-                    <Details/>
-           
-                </div>
-            </div>
-        </div>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        
-        </div>
-    );
+        )
+    }
+    
+    
+    
+    
 }
 
-export default Trophies;<h1>Trophies</h1>
+export default Trophies

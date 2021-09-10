@@ -1,19 +1,17 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom'
-import PriceFilter from './PriceFilter';
 import trophy from './Images/trophy.png'
 import upArrowPic from './Images/upArrow.png'
 import downArrow from './Images/downArrow.png'
 import profile from './Images/—Pngtree—vector edit profile icon_4102545.png'
 import plusIcon from './Images/plusIcon.png'
 import aboutIcon from './Images/aboutIcon.svg'
-// import dropDownIcon from './Images/dropdown.png'
+import whiteArrow from './Images/whiteArrow.png'
+import { DataContext } from './DataContext';
 
-//great job max!!! incredible work!!!
-//https://www.visualpharm.com/free-icons/menu-595b40b65ba036ed117d44bf  <---nice website for icons
-function Dropdown(props) {
-    // const dropDownIcon = "https://visualpharm.com/assets/350/Menu-595b40b65ba036ed117d44bf.svg"
-    
+function Dropdown({ currentUser }) {
+
+    const { loggedIn} = useContext(DataContext)
     const [dropDown, setDropDown] = useState(false)
     const [upArrow, setUpArrow] = useState(false)
 
@@ -22,15 +20,20 @@ function Dropdown(props) {
         !dropDown ? setDropDown(true) : setDropDown(false)
 
     }
-
+    const logout = () => {
+        clickArrow()
+        localStorage.clear()
+        window.location.reload()
+    }
+console.log(`loggedin ${loggedIn}`)
     if (dropDown === false){
         return (
             <div className = "Dropdown">
-                {!upArrow ? <img className = "upArrow" src = { upArrowPic } onClick = { clickArrow } alt = "uparrow"/> : <img className = "downArrow" src = { downArrow } onClick = { clickArrow } alt = "upArrow"/>} 
+                {!upArrow ? <img className = "upArrow" src = { whiteArrow} onClick = { clickArrow } alt = "uparrow"/> : <img className = "downArrow" src = { downArrow } onClick = { whiteArrow } alt = "upArrow"/>} 
                 <div className = "dropDownContent">
                 <div className = "hideText">
                  <div className = "dropBTN">
-                 <Link to = '/trophies'className= "maxHeader link">Trophies </Link>
+                 <Link to = '/dashboard'className= "maxHeader link">Dashboard </Link>
                 </div>
                 <div className = "dropBTN">
                 <Link to = '/create' className= "maxHeader link">Create NFT</Link>
@@ -54,19 +57,20 @@ function Dropdown(props) {
             <div className = "hideText">
             <div className = "dropBTN">
             <img src= {trophy} alt="Trophies" className= "dropIcons"/>
-                 <Link to = '/trophies'className= "link">Trophies </Link>
+                 <Link to = {`/dashboard/${currentUser}`}className= "link" onClick = { clickArrow }>Dashboard </Link>
                 </div>
                 <div className = "dropBTN">
                 <img src= { plusIcon } alt="Create NFT" className= "dropIcons"/>
-                <Link to = '/create' className= "link">Create NFT</Link>
+                <Link to = '/create' className= "link" onClick = { clickArrow }>Create NFT</Link>
                 </div> 
                 <div className = "dropBTN">
                 <img src={ aboutIcon }  alt="About" className= "dropIcons"/>
-                <Link to = '/about' className= "link">About</Link>
+                <Link to = '/about' className= "link" onClick = { clickArrow }>About</Link>
                 </div>
                 <div className = "dropBTN">
                 <img src = { profile } alt= "" className= "dropIcons" />
-                <Link to = '/Login' className= "link">Login</Link>
+                {!loggedIn? <Link to = '/Login' className= "link" onClick = { clickArrow }>Login</Link> :
+                <Link to = "/" className = "link" onClick = { logout }>Logout</Link>}
                 </div> 
              </div>
             
