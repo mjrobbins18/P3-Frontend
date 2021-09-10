@@ -17,8 +17,8 @@ function Dashboard({ match }) {
                 <h3>Current Balance: ${ userInfo[0].balance }</h3>
                 {userInfo[0].trophies.length < 2 ? <h2>You currently do not own any NFT's</h2>: null}
                 {userInfo[0].trophies.length < 2 ? <div className = "loginBtn"><Link to = '/browse' className = "link">Buy NFTs</Link></div> : null}
-                {!recent? <h2>You have not created any NFT's yet</h2>: null}
-                {!recent? <div className = "loginBtn"><Link to = '/create' className = "link">Create NFT</Link></div> : null}
+                {userInfo[0].created.length < 2 ? <h2>You have not created any NFT's yet</h2>: null}
+                {userInfo[0].created.length < 2 ? <div className = "loginBtn"><Link to = '/create' className = "link">Create NFT</Link></div> : null}
             </div>
             <div >
             <Trophies userInfo = { userInfo }/>

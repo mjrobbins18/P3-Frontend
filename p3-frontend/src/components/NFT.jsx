@@ -26,7 +26,7 @@ function NFT({ match }) {
         }
         
       }
-
+console.log(thisNFT[0])
     return (
 <div className= "BuyDiv"> 
 
@@ -46,12 +46,13 @@ function NFT({ match }) {
              <div class="face face2">
                <div class="content">
               <p> {thisNFT[0].description}</p>
+              <p>Current Price: ${thisNFT[0].price}</p>
              {/* <Details thisNFT = { thisNFT }/> */}
             
                  <br></br>
                  
                      <Link className = "buyLink" to = { loginOrBuy } onClick = { checkLogin }>Buy Now</Link>
-               
+                    <Link className = "buyLink" to = {`/deleteNFT/${thisNFT[0]._id}`}>Delete NFT</Link>
                  <br></br>
                  
                  <br></br>
