@@ -4,7 +4,7 @@ import { DataContext } from './DataContext';
 
 function RecentlyAdded(props) {
 
-    const { random } = useContext(DataContext)
+    const { random, recent } = useContext(DataContext)
 
 
 
@@ -13,7 +13,7 @@ function RecentlyAdded(props) {
              <div>
             <fieldset className = "collectionField"><legend className = "collectionLegend">Recently Added</legend></fieldset>
         <div className = "recentContainer">
-            {random.map(item => {
+            {recent.map(item => {
                 return(
                     <div className = "div">
                         <Link to = {`/NFT/${item._id}`}>

@@ -38,7 +38,7 @@ function Landing(props) {
                 <Route exact path = "/dashboard/:id"  render = { routerProps => <Dashboard match = { routerProps.match }/>}/>
                 <Route exact path = "/createdNFT/:id"  render = { routerProps => <UserNFTCont match = { routerProps.match }/>}/>
                 <Route exact path = "/deleteNFT/:id"  render = { routerProps => <DeleteNFT match = { routerProps.match }/>}/>
-                <Route exact path = "/buy" render = { Buy }/>
+                <Route exact path = "/buy/:id"  render = { routerProps => <Buy match = { routerProps.match }/>}/>
                 
                 <Route exact path = "/newuser" render = { CreateUserCont }/>
                 </div>

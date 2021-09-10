@@ -10,7 +10,7 @@ function Featured(props) {
     return (
         <div>
             <div>
-            <fieldset className = "collectionField"><legend className = "collectionLegend">Featured</legend></fieldset>
+            <fieldset className = "collectionField"><legend className = "collectionLegend">Favorites</legend></fieldset>
         <div className = "imageContainer">
             {random.map(item => {
                 return(

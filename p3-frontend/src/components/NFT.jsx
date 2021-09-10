@@ -49,7 +49,7 @@ console.log(thisNFT[0])
             
                  <br></br>
                  
-                     <Link className = "buyLink" to = { loginOrBuy } onClick = { checkLogin }>Buy Now</Link>
+                     <Link className = "buyLink" to = { `/buy/${thisNFT[0]._id}` } onClick = { checkLogin }>Buy Now</Link>
                     <Link className = "buyLink" to = {`/deleteNFT/${thisNFT[0]._id}`}>Delete NFT</Link>
                  <br></br>
                  
