@@ -1,15 +1,10 @@
 import React from 'react';
 import { Route } from 'react-router-dom'
 import Header from './Header'
-// import Sidebar from './Sidebar';
-import CreateNFT from './CreateNFT';
 import About from './About'
 import Login from './Login';
 import Main from './Main';
 import FooterNav from './FooterNav';
-import NFT from './NFT'
-import Random from './Random';
-import CreateUser from './CreateUser';
 import Buy from './Buy';
 import NFTContainer from './NFTContainer';
 import RandomCont from './RandomCont';

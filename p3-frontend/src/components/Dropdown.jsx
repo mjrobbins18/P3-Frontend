@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom'
-import PriceFilter from './PriceFilter';
 import trophy from './Images/trophy.png'
 import upArrowPic from './Images/upArrow.png'
 import downArrow from './Images/downArrow.png'
@@ -8,14 +7,10 @@ import profile from './Images/—Pngtree—vector edit profile icon_4102545.png'
 import plusIcon from './Images/plusIcon.png'
 import aboutIcon from './Images/aboutIcon.svg'
 import whiteArrow from './Images/whiteArrow.png'
-import whiteUpArrow from './Images/whiteUpArrow.png'
 import { DataContext } from './DataContext';
-// import dropDownIcon from './Images/dropdown.png'
 
-//great job max!!! incredible work!!!
-//https://www.visualpharm.com/free-icons/menu-595b40b65ba036ed117d44bf  <---nice website for icons
 function Dropdown({ currentUser }) {
-    // const dropDownIcon = "https://visualpharm.com/assets/350/Menu-595b40b65ba036ed117d44bf.svg"
+
     const { loggedIn} = useContext(DataContext)
     const [dropDown, setDropDown] = useState(false)
     const [upArrow, setUpArrow] = useState(false)

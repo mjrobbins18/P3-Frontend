@@ -19,7 +19,7 @@ function CreateNFT(props) {
         const [createdNFT, setCreatedNFT] = useState({})
 
         const post = () => {
-            axios.post("http://localhost:8001/nftmarketplace/new", createNftState)
+            axios.post("https://nft-api-p3.herokuapp.com/nftmarketplace/new", createNftState)
             .then(res => setCreatedNFT(res.data))
         }
    
@@ -28,7 +28,7 @@ function CreateNFT(props) {
          post()
          axios.get(userUrl)
         .then(res => setUserInfo(res.data))
-         .then(axios.put(`http://localhost:8001/api/users/newNFT/${userInfo[0]._id}`, createdNFT))
+        axios.put(`https://nft-api-p3.herokuapp.com/api/users/newNFT/${userInfo[0]._id}`, createdNFT)
         .catch(console.error)
         setCreateNftState(initialNftState)
         }

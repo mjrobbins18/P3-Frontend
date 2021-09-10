@@ -7,8 +7,6 @@ function FeaturedNFT(props) {
   return (
     <div className="featDiv">
       <Introtxt />
-
-      {/* <script src="https://kit.fontawesome.com/95a02bd20d.js"></script> */}
       <div class="featContainer">
         <div class="card">
           <div class="face face1">

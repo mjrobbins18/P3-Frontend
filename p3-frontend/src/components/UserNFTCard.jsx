@@ -11,8 +11,6 @@ function UserNFTCard({match}) {
     console.log(thisCreatedNFT[0]._id)
     return (
         <div className= "BuyDiv"> 
-
-    {/* <script src="https://kit.fontawesome.com/95a02bd20d.js"></script> */}
         <div class="BuyContainer">
             
            <div class="card">

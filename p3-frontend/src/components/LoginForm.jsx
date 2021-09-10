@@ -2,8 +2,6 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { DataContext } from './DataContext';
 import axios from 'axios'
-import setAuthToken from './setAuthToken';
-import jwt_decode from "jwt-decode";
 
 
 function LoginForm(props) {
@@ -27,7 +25,7 @@ const {loginState,
     const handleSubmit = (event) => {
         event.preventDefault()
         setLoginUser(userFormState)
-        axios.post("http://localhost:8001/api/users/login", userFormState)
+        axios.post("https://nft-api-p3.herokuapp.com/api/users/login", userFormState)
         .then(res => {
           const { token } = res.data
           localStorage.setItem("jwtToken", token)

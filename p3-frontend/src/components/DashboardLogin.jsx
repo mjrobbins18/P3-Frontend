@@ -1,9 +1,8 @@
 import React from 'react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import Dashboard from './Dashboard';
 import { DataContext } from './DataContext';
-import Trophies from './Trophies';
+
 
 function DashboardLogin(props) {
 

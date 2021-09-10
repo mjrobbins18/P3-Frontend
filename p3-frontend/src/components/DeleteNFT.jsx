@@ -10,7 +10,7 @@ function DeleteNFT({match}) {
     const history = useHistory()
 
     const deleteNFT = () => {
-        axios.delete(`http://localhost:8001/nftmarketplace/nft/${match.params.id}`)
+        axios.delete(`https://nft-api-p3.herokuapp.com/nftmarketplace/nft/${match.params.id}`)
         .then(res => console.log(res))
         .catch(console.error)
         history.push('/')
