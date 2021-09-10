@@ -50,7 +50,7 @@ const [nftFormState, setNftFormState] = useState(initialNftState)
 const [userState, setUserState] = useState(initialUserState)
 const [userFormState, setUserFormState] = useState(initialUserState)
 const [recent, setRecent] = useState([])
-const url = "https://nft-api-p3.herokuapp.com/nftmarketplace"
+const url = "http://localhost:8001/nftmarketplace/findnft"
 const collectUrl = "https://nft-api-p3.herokuapp.com/nftmarketplace/collections"
 const userUrl = `http://localhost:8001/api/users/username/${currentUser}`
 const recentUrl = `http://localhost:8001/nftmarketplace/newfind`
@@ -74,7 +74,7 @@ console.log(random)
     .then(res => setRecent(res.data))
     .catch(console.error)
 }, [])
-console.log(recent)
+console.log(`userInfo ${userInfo}`)
   return (
     <div className = "App" >
       <DataContext.Provider value = {{ formStateMinMax,
@@ -109,7 +109,8 @@ console.log(recent)
                                       currentUser,
                                       userInfo,
                                       setUserInfo,
-                                      recent
+                                      recent,
+                                      userUrl
                                       }}>
         <Landing/>
       </DataContext.Provider>

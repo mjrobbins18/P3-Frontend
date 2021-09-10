@@ -12,7 +12,9 @@ function Trophies({ userInfo }) {
         return (
             <div className = "collectionContainer">
                 <fieldset className = "collectionField"><legend className = "collectionLegend">Currently Owned NFTS</legend></fieldset>
-    
+                <div className = "imageContainer">
+                    
+                </div>
             </div>
         )
     }

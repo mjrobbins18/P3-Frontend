@@ -16,7 +16,7 @@ import { DataContext } from './DataContext';
 //https://www.visualpharm.com/free-icons/menu-595b40b65ba036ed117d44bf  <---nice website for icons
 function Dropdown({ currentUser }) {
     // const dropDownIcon = "https://visualpharm.com/assets/350/Menu-595b40b65ba036ed117d44bf.svg"
-    const { loggedIn, checkLogin } = useContext(DataContext)
+    const { loggedIn} = useContext(DataContext)
     const [dropDown, setDropDown] = useState(false)
     const [upArrow, setUpArrow] = useState(false)
 
