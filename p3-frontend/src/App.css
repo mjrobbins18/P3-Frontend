@@ -961,14 +961,14 @@ background-color: rgb(184, 117, 247);
 .upArrow {
   margin-top: 18px;
   height: 15px;
-  width: 15px;
+  width: 100%;
   margin-left: 85%;
   cursor: pointer;
 }
 .downArrow {
   margin-top: 12px;
   height: 25px;
-  width: 17px;
+  width: 100%;
   margin-left: 85%;
   cursor: pointer;
 }
@@ -1620,18 +1620,19 @@ box-shadow: 0 5px 30px rgba(46, 3, 82, 0.548);
       color: white;
       z-index: 2;
     }
+    .testdiv{
+      margin-left: 20px;
+    }
     .upArrow {
-      margin-top: 18px;
+      /* margin-top: 18px; */
       height: 15px;
       width: 15px;
-      margin-left: 85%;
       cursor: pointer;
     }
     .downArrow {
-      margin-top: 12px;
+      /* margin-top: 12px; */
       height: 25px;
       width: 17px;
-      margin-left: 85%;
       cursor: pointer;
     }
     .iconDiv {
@@ -2013,8 +2014,8 @@ box-shadow: 0 5px 30px rgba(46, 3, 82, 0.548);
 #introtxt {
   margin-top: 1vh;
   
-  margin-left: 12vw;
-  margin-bottom: -25%;
+  margin-left: 7vw;
+  margin-bottom: -20%;
   
 }
 #introH2 {
@@ -2028,7 +2029,7 @@ box-shadow: 0 5px 30px rgba(46, 3, 82, 0.548);
   height: 98%;
 }
 .BuyContainer{
-  width: 100px;
+  width: 300px;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -2043,7 +2044,7 @@ box-shadow: 0 5px 30px rgba(46, 3, 82, 0.548);
 }
 
 .BuyContainer .card .face{
-  width:85vw;
+  width:75vw;
   height: 39vh;
   transition:.4s;
   
@@ -2158,8 +2159,8 @@ background-color: rgb(215, 176, 251);
   .featContainer{
     position: auto;
     padding-bottom: 1%;
-    width: 100vw;
-    height: 60%;
+    width: 115%;
+    height: 0%;
     max-width: 110vw;
   }
   
@@ -2171,10 +2172,10 @@ background-color: rgb(215, 176, 251);
   }
   
   .featContainer .card .face{
-    width: 75%;
-    height: 55%;
+    width: 80%;
+    height: 25%;
     transition:.4s;
-    margin-left: 12vw;
+    margin-left: 5vw;
    margin-bottom: -4%;
   }
   

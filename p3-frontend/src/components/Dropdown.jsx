@@ -25,11 +25,12 @@ function Dropdown({ currentUser }) {
         localStorage.clear()
         window.location.reload()
     }
-console.log(`loggedin ${loggedIn}`)
     if (dropDown === false){
         return (
             <div className = "Dropdown">
-                {!upArrow ? <img className = "upArrow" src = { whiteArrow} onClick = { clickArrow } alt = "uparrow"/> : <img className = "downArrow" src = { downArrow } onClick = { whiteArrow } alt = "upArrow"/>} 
+                
+                {!upArrow ?<div className = "testdiv" onClick = { clickArrow }> <img className = "upArrow" src = { upArrowPic } alt = "uparrow" onClick = { clickArrow }/> </div>: <div onClick = { clickArrow  } className = "testdiv"><img className = "downArrow" src = { downArrow } alt = "upArrow" onClick = { clickArrow }/></div>} 
+                
                 <div className = "dropDownContent">
                 <div className = "hideText">
                  <div className = "dropBTN">
@@ -52,7 +53,10 @@ console.log(`loggedin ${loggedIn}`)
     }else if(dropDown === true){
         return (
             <div className = "Dropdown">
-                {!upArrow ? <img className = "upArrow" src = { upArrowPic } onClick = { clickArrow } alt = "uparrow"/> : <img className = "downArrow" src = { downArrow } onClick = { clickArrow } alt = "upArrow"/>} 
+                <div onClick = { clickArrow } className = "testdiv" >
+                {!upArrow ? <img className = "upArrow" src = { upArrowPic }  alt = "uparrow"/> : <img className = "downArrow" src = { downArrow } alt = "upArrow"/>} 
+
+                </div>
             <div className = "show">
             <div className = "hideText">
             <div className = "dropBTN">

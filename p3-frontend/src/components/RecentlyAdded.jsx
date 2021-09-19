@@ -4,8 +4,7 @@ import { DataContext } from './DataContext';
 
 function RecentlyAdded(props) {
 
-    const { random, recent } = useContext(DataContext)
-
+    const { recent } = useContext(DataContext)
 
 
     return (
@@ -16,7 +15,7 @@ function RecentlyAdded(props) {
             {recent.map(item => {
                 return(
                     <div className = "div">
-                        <Link to = {`/NFT/${item._id}`}>
+                        <Link to = {`/recentNFT/${item._id}`}>
                             <img  className = "featuredImage" src ={ item.image_url } alt = ""/>
                         </Link>
                     </div>

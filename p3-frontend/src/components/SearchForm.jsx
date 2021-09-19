@@ -5,7 +5,7 @@ import searchIcon from './Images/searchIcon.png'
 
 function SearchForm(props) {
 
-const {searchState, setSearchState, formState, setFormState, setRandom} = useContext(DataContext)
+const {searchState, setSearchState, setRandom} = useContext(DataContext)
 const history = useHistory()
 let url = "https://nft-api-p3.herokuapp.com/nftmarketplace"
 const [currentURL, setCurrentURL] = useState(url)

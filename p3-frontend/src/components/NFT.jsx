@@ -24,11 +24,11 @@ function NFT({ match }) {
         }
         
       }
-console.log(thisNFT[0])
+
     return (
 <div className= "BuyDiv"> 
 
-    {/* <script src="https://kit.fontawesome.com/95a02bd20d.js"></script> */}
+   
         <div class="BuyContainer">
             
            <div class="card">
@@ -45,7 +45,7 @@ console.log(thisNFT[0])
                <div class="content">
               <p> {thisNFT[0].description}</p>
               <p>Current Price: ${thisNFT[0].price}</p>
-             {/* <Details thisNFT = { thisNFT }/> */}
+            
             
                  <br></br>
                  
@@ -61,27 +61,7 @@ console.log(thisNFT[0])
           </div>
         </div>
 
-        // <div>
-        //     <div className = "nftContainer" >
-        //         <h1>{ thisNFT[0].name}</h1>
-        //     <div className = "nftImg">
-        //         <img className = "nftMain" src = { thisNFT[0].image_url } alt = "mountain"/>
-        //     </div>
-        //     <div className = "price">
-        //         Price: $20340923
-        //         <div className = "buyNFT">
-        //             <Link className = "buyLink" to = { loggedIn.buyOrLogin } onClick = { checkLogin }>Buy Now</Link>
-        //         </div>
-        //     </div>
-        //     <div className = "detailsContainer">
-        //     <Details thisNFT = { thisNFT }/>
-        //     </div>
-            
-           
-        //     </div>
-        //     <SimilarArt/>
-          
-        // </div>
+       
     );
 }
 

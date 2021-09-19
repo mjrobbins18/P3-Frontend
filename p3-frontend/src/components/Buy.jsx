@@ -19,7 +19,7 @@ function Buy({ match }) {
         .then(res => setNftInfo(res.data))
     }, [])
 
-    console.log(nftInfo)
+    
 
     const buyNFT = () => {
         axios.put(`https://nft-api-p3.herokuapp.com/api/users/newTrophy/${userInfo[0]._id}`,nftInfo)

@@ -5,8 +5,8 @@ import { DataContext } from './DataContext';
 import axios from 'axios'
 
 function DeleteNFT({match}) {
-    const {userInfo} = useContext(DataContext)
-    const thisID = {created:{_id: match.params.id}}
+    // const {userInfo} = useContext(DataContext)
+    // const thisID = {created:{_id: match.params.id}}
     const history = useHistory()
 
     const deleteNFT = () => {

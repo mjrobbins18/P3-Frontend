@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { DataContext } from './DataContext';
 import axios from 'axios'
@@ -6,16 +6,11 @@ import axios from 'axios'
 
 function LoginForm(props) {
 
-const {loginState, 
-       loggedIn, 
-       setLoggedIn,
-       loginUser,
+const {
        setLoginUser,
        initialUserState,
        userFormState, 
        setUserFormState,
-       setToken,
-       loginOrBuy,
        setLoginOrBuy
                         } = useContext(DataContext)
 
@@ -35,11 +30,10 @@ const {loginState,
           history.push('/')
           window.location.reload()
         })
-        .then(res => console.log(`res ${res}`))
         .catch(err => alert("Incorrect Username or Password"))
         setUserFormState(initialUserState)
         
-        console.log(loggedIn)
+      
         
     }
 
@@ -49,8 +43,7 @@ const {loginState,
         })
 
     }
-    console.log(loginUser)
-    console.log(userFormState)
+ 
     return (
         <div className = "formDiv">
 

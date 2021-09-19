@@ -3,14 +3,19 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { DataContext } from './DataContext';
 
-function UserNFTCard({match}) {
+function NewNFTCard({ match }) {
     
-    const {userInfo} = useContext(DataContext)
+    const {recent} = useContext(DataContext)
+    
     const thisID = match.params.id
-    const thisCreatedNFT = userInfo[0].created.filter(item => item._id === thisID)
+    const thisNFT = recent.filter(item => item._id === thisID)
+             
+
     
     return (
         <div className= "BuyDiv"> 
+
+    
         <div class="BuyContainer">
             
            <div class="card">
@@ -20,24 +25,23 @@ function UserNFTCard({match}) {
              
                   <i class="fab fa-windows"></i>   
                          
-                 <img id= "NFTfeat" src={ thisCreatedNFT[0].image_url } alt="" />
+                 <img id= "NFTfeat" src={ thisNFT[0].image_url } alt="" />
                
              </div>
              <div class="face face2">
                <div class="content">
-              <p> {thisCreatedNFT[0].description}</p>
-             {/* <Details thisNFT = { thisNFT }/> */}
+              <p> {thisNFT[0].description}</p>
+              <p>Current Price: ${thisNFT[0].price}</p>
+             
             
                  <br></br>
-                 <Link to = {`/sell/${thisCreatedNFT[0]._id}`}>Sell</Link>
-                 <br></br>
-                 <Link to ={`/deleteNFT/${thisCreatedNFT[0]._id}`}>Delete</Link>
                  
-                 
+                     <Link className = "buyLink" to = { `/buy/${thisNFT[0]._id}` }>Buy Now</Link>
+                    <Link className = "buyLink" to = {`/deleteNFT/${thisNFT[0]._id}`}>Delete NFT</Link>
                  <br></br>
                  
                  <br></br>
-                 <h1>{ thisCreatedNFT[0].name}</h1>
+                 <h1>{ thisNFT[0].name}</h1>
                </div>
              </div>
           </div>
@@ -46,4 +50,4 @@ function UserNFTCard({match}) {
     );
 }
 
-export default UserNFTCard;
+export default NewNFTCard;
