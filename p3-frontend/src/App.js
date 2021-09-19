@@ -15,7 +15,7 @@ const initialNftState = {
   name: "",
   image_url: "",
   description: "",
-  price: 0
+  price: ""
 }
 const initialUserState = {
   username: "",

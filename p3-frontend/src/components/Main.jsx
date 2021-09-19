@@ -2,6 +2,7 @@ import React from 'react';
 import Collection from './Collection';
 import RecentlyAdded from './RecentlyAdded';
 import FeaturedNFT from './FeaturedNFT';
+import Featured from './Featured';
 
 function Main(props) {
     return (
@@ -12,7 +13,7 @@ function Main(props) {
             <div>
         
                 <Collection/>
-                {/* <Featured/> */}
+                <Featured/>
                 <RecentlyAdded/>
             </div>
         </div>

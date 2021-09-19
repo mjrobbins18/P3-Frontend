@@ -40,6 +40,7 @@ function CreateNFT(props) {
             [event.target.id]: event.target.value,
         })
     }
+
     console.log(userInfo)
     console.log(createdNFT)
     if(loggedIn === "") {

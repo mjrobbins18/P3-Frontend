@@ -35,9 +35,7 @@ function FeaturedNFT(props) {
         </div>
       </div>
     </div>
-    // <div >
-    //     <img class="box glowing" src={FeaturedImg} alt="" />
-    // </div>
+  
   );
 }
 
