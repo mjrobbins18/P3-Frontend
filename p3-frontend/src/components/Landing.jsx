@@ -15,6 +15,7 @@ import DashboardCont from './DashboardCont';
 import Dashboard from './Dashboard';
 import UserNFTCont from './UserNFTCont';
 import DeleteNFT from './DeleteNFT';
+import NewNFTCard from './NewNFTCard';
 
 
 
@@ -26,7 +27,6 @@ function Landing(props) {
             </header>
             <main className = "Main">
                 <div>
-                {/* <Sidebar/> */}
                 <Route exact path = "/" render = { Main }/>
                 <Route exact path = "/browse" render = { RandomCont }/>
                 <Route exact path = "/about" render = { About }/>
@@ -38,8 +38,8 @@ function Landing(props) {
                 <Route exact path = "/dashboard/:id"  render = { routerProps => <Dashboard match = { routerProps.match }/>}/>
                 <Route exact path = "/createdNFT/:id"  render = { routerProps => <UserNFTCont match = { routerProps.match }/>}/>
                 <Route exact path = "/deleteNFT/:id"  render = { routerProps => <DeleteNFT match = { routerProps.match }/>}/>
-                <Route exact path = "/buy" render = { Buy }/>
-                
+                <Route exact path = "/buy/:id"  render = { routerProps => <Buy match = { routerProps.match }/>}/>
+                <Route exact path = "/recentNFT/:id"  render = { routerProps => <NewNFTCard match = { routerProps.match }/>}/>
                 <Route exact path = "/newuser" render = { CreateUserCont }/>
                 </div>
                

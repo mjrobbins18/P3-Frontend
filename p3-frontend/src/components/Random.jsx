@@ -7,7 +7,7 @@ function Random(props) {
     const { random } = useContext(DataContext)
     
 
-    console.log(random)
+    
 
 
     return (

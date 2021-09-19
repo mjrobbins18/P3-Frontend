@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Dropdown from './Dropdown';
 import SearchBar from './SearchBar';
 import trophy from './Images/trophy.png'
@@ -34,11 +34,7 @@ function Header(props) {
             
              
             <SearchBar/>
-            {/* <Dropdown/> */}
-           
-           
-           
-            {/* added div to try to keep organized on header */}
+        
             
         </div>
     );
